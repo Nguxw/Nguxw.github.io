@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* M.Eng. in Southeast University, Software Engineering, 2025 - present
-* B.Eng. in Nanjing University of Information Science and Technology, Software Engineering, 2021 - 2025
+* M.S. in Southeast University, Software Engineering, 2025 - present
+* B.S. in Nanjing University of Information Science and Technology, Software Engineering, 2021 - 2025
 
 
