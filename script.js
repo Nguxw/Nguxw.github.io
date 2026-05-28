@@ -10,32 +10,26 @@ const copy = {
     },
     hero: {
       eyebrow: "AI Application / Agent Engineering",
-      title: "Building useful AI agents with product discipline.",
-      lead: "I am Xianwei Guo, an M.S. student in Software Engineering at Southeast University. I build governed AI applications, agent workflows, RAG systems, and evaluation-first developer tools.",
+      title: "AI application development with an engineering-first approach.",
+      lead: "I am Xianwei Guo, an M.S. student in Software Engineering at Southeast University. My work focuses on AI application development, agent harnesses, RAG, MCP-style tool integration, and evaluation-driven engineering.",
       primary: "View Projects",
       secondary: "Email Me"
     },
-    metrics: {
-      systems: "Flagship agent systems",
-      evals: "Mini-Hermes eval cases",
-      regression: "SmartCS regression cases",
-      stars: "GitHub stars"
-    },
     about: {
       kicker: "About",
-      title: "I care about AI systems that are observable, controllable, and actually useful.",
-      copy: "My current work centers on AI application engineering: agent workflows, retrieval systems, safe tool execution, human confirmation, and regression evaluation. I like turning prototype-grade LLM ideas into software that has clear state, interfaces, tests, and operational visibility.",
+      title: "I build AI applications with clear workflows and measurable behavior.",
+      copy: "My work is grounded in software engineering practice: define product scenarios, design service state and APIs, connect retrieval and tools, then use harnesses, traces, and tests to keep behavior reproducible. I focus on making agent systems maintainable rather than only impressive in demos.",
       signal1: {
-        title: "Agent product logic",
-        copy: "Designing workflows that bind LLM reasoning to explicit tasks, policies, cases, and user-visible state."
+        title: "Application scenarios",
+        copy: "Translate support and developer workflows into explicit states, APIs, and user-facing interactions."
       },
       signal2: {
-        title: "Engineering guardrails",
-        copy: "Building tool policies, confirmation gates, audit logs, sandbox boundaries, and rollback-friendly architecture."
+        title: "Agent infrastructure",
+        copy: "Implement orchestration, retrieval, MCP-style tool integration, memory, and permission boundaries."
       },
       signal3: {
-        title: "Evaluation habits",
-        copy: "Treating eval datasets, deterministic tests, screenshots, and CI checks as first-class parts of AI application development."
+        title: "Quality system",
+        copy: "Use evaluation harnesses, trace records, CI checks, and screenshots to verify behavior across iterations."
       }
     },
     stack: {
@@ -48,19 +42,19 @@ const copy = {
     },
     projects: {
       kicker: "Selected Projects",
-      title: "Self-built AI projects with real workflows.",
+      title: "Selected engineering projects in AI application development.",
       view: "View Repository",
       smartcs: {
         copy: "A governed AI customer support operations console. It wraps an LLM agent with workflow contracts, service-case state, RAG evidence, policy-controlled tools, human confirmation, ticket handoff, SSE streaming, and regression evaluation.",
         point1: "Governed tool runtime",
         point2: "Case and ticket state",
-        point3: "51 deterministic eval cases"
+        point3: "Evaluation harness"
       },
       hermes: {
-        copy: "A lightweight local AI agent workspace for project engineering. It combines model calls, reusable skills, durable memory, session recall, safe terminal execution, auditable traces, and a 100-case evaluation harness.",
+        copy: "A lightweight local AI agent workspace for project engineering. It combines model calls, reusable skills, durable memory, session recall, safe terminal execution, auditable traces, and evaluation harness support.",
         point1: "Tool-using agent loop",
         point2: "Skills and memory layer",
-        point3: "100-case benchmark"
+        point3: "Evaluation harness"
       }
     },
     education: {
@@ -79,7 +73,7 @@ const copy = {
       email: "Send a message",
       github: "Explore repositories"
     },
-    footer: "Built as a static GitHub Pages portfolio for Xianwei Guo."
+    footer: "Last updated: May 2026 · Nguxw.github.io"
   },
   zh: {
     skip: "跳到正文",
@@ -92,32 +86,26 @@ const copy = {
     },
     hero: {
       eyebrow: "AI 应用开发 / Agent 工程",
-      title: "用工程化方式构建真正可用的 AI Agent。",
-      lead: "我是 Xianwei Guo，东南大学软件工程专业在读硕士。当前主要方向是 AI 应用开发、Agent 工作流、RAG 系统、安全工具调用和评测驱动的开发工具。",
+      title: "面向 AI 应用与 Agent 系统的工程实践。",
+      lead: "我是 Xianwei Guo，东南大学软件工程专业在读硕士。当前关注 AI 应用开发、Agent Harness、RAG、MCP 风格工具集成和评测驱动工程。",
       primary: "查看项目",
       secondary: "联系我"
     },
-    metrics: {
-      systems: "核心 Agent 系统",
-      evals: "Mini-Hermes 评测用例",
-      regression: "SmartCS 回归用例",
-      stars: "GitHub Stars"
-    },
     about: {
       kicker: "关于我",
-      title: "我关注可观测、可控制、真正能落地的 AI 系统。",
-      copy: "我的当前方向聚焦在 AI 应用工程：Agent 工作流、检索增强、安全工具执行、人工确认和回归评测。我喜欢把原型级 LLM 想法打磨成有清晰状态、接口、测试和运行可见性的软件系统。",
+      title: "我希望把 AI 应用做成可维护、可验证的软件系统。",
+      copy: "我的工作更偏工程落地：先明确业务场景与用户流程，再设计服务状态、接口、检索和工具调用，并通过 Harness、Trace、测试与 CI 保持行为可复现。相比只做演示效果，我更关注系统在迭代中的稳定性和可维护性。",
       signal1: {
-        title: "Agent 产品逻辑",
-        copy: "把 LLM 推理绑定到明确的任务、策略、工单、状态和用户可见反馈中。"
+        title: "应用场景建模",
+        copy: "把客服、开发者工具等流程拆解为清晰的状态、接口和用户交互。"
       },
       signal2: {
-        title: "工程护栏",
-        copy: "构建工具策略、确认边界、审计日志、沙箱限制和便于回滚的架构。"
+        title: "Agent 基础设施",
+        copy: "实现编排、检索、MCP 风格工具集成、记忆和权限边界。"
       },
       signal3: {
-        title: "评测习惯",
-        copy: "把评测数据集、确定性测试、截图和 CI 检查看作 AI 应用开发的一等公民。"
+        title: "质量体系",
+        copy: "使用评测 Harness、Trace 记录、CI 检查和截图验证来支撑持续迭代。"
       }
     },
     stack: {
@@ -130,19 +118,19 @@ const copy = {
     },
     projects: {
       kicker: "精选项目",
-      title: "自己构建、有完整工作流的 AI 项目。",
+      title: "AI 应用开发方向的代表性工程项目。",
       view: "查看仓库",
       smartcs: {
         copy: "一个面向售后客服场景的 AI 运营控制台。项目将 LLM Agent 包装在显式工作流契约、服务工单状态、RAG 证据、工具策略、人工确认、转人工、SSE 流式响应和回归评测之中。",
         point1: "受控工具运行时",
         point2: "服务单与工单状态",
-        point3: "51 个确定性评测用例"
+        point3: "评测 Harness"
       },
       hermes: {
-        copy: "一个面向本地项目工程的轻量 AI Agent 工作台。它组合了模型调用、可复用 Skills、持久记忆、会话召回、安全终端执行、可审计 Trace 和 100 用例评测框架。",
+        copy: "一个面向本地项目工程的轻量 AI Agent 工作台。它组合了模型调用、可复用 Skills、持久记忆、会话召回、安全终端执行、可审计 Trace 和评测 Harness 支持。",
         point1: "可调用工具的 Agent Loop",
         point2: "Skills 与记忆层",
-        point3: "100 用例基准测试"
+        point3: "评测 Harness"
       }
     },
     education: {
@@ -161,7 +149,7 @@ const copy = {
       email: "发送邮件",
       github: "查看仓库"
     },
-    footer: "为 Xianwei Guo 构建的静态 GitHub Pages 个人主页。"
+    footer: "最近更新：2026 年 5 月 · Nguxw.github.io"
   }
 };
 
@@ -230,23 +218,7 @@ function setupActiveNavigation() {
   sections.forEach((section) => observer.observe(section));
 }
 
-async function hydrateGithubStats() {
-  const starTarget = document.getElementById("githubStars");
-  if (!starTarget) return;
-
-  try {
-    const response = await fetch("https://api.github.com/users/Nguxw/repos?per_page=100&sort=updated");
-    if (!response.ok) throw new Error("GitHub request failed");
-    const repos = await response.json();
-    const stars = repos.reduce((total, repo) => total + repo.stargazers_count, 0);
-    starTarget.textContent = stars.toLocaleString();
-  } catch {
-    starTarget.textContent = "0+";
-  }
-}
-
 hydrateLanguage();
 setupLanguageToggle();
 setupReveal();
 setupActiveNavigation();
-hydrateGithubStats();

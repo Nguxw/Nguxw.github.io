@@ -42,9 +42,9 @@
             <span class="status-dot"></span>
             <span data-i18n="hero.eyebrow">AI Application / Agent Engineering</span>
           </div>
-          <h1 id="hero-title" data-i18n="hero.title">Building useful AI agents with product discipline.</h1>
+          <h1 id="hero-title" data-i18n="hero.title">AI application development with an engineering-first approach.</h1>
           <p class="hero-lead" data-i18n="hero.lead">
-            I am Xianwei Guo, an M.S. student in Software Engineering at Southeast University. I build governed AI applications, agent workflows, RAG systems, and evaluation-first developer tools.
+            I am Xianwei Guo, an M.S. student in Software Engineering at Southeast University. My work focuses on AI application development, agent harnesses, RAG, MCP-style tool integration, and evaluation-driven engineering.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#projects">
@@ -72,31 +72,17 @@
             </div>
             <pre><code>{
   "name": "Xianwei Guo",
-  "role": "AI Agent Engineer",
+  "role": "AI Application Engineer",
   "school": "Southeast University",
-  "focus": ["RAG", "Tool Use", "Eval"]
+  "focus": [
+    "Agent Harness",
+    "MCP",
+    "RAG",
+    "Observability"
+  ]
 }</code></pre>
           </div>
         </aside>
-
-        <div class="metric-strip" aria-label="Highlights">
-          <div class="metric">
-            <span class="metric-value">2</span>
-            <span class="metric-label" data-i18n="metrics.systems">Flagship agent systems</span>
-          </div>
-          <div class="metric">
-            <span class="metric-value">100</span>
-            <span class="metric-label" data-i18n="metrics.evals">Mini-Hermes eval cases</span>
-          </div>
-          <div class="metric">
-            <span class="metric-value">51</span>
-            <span class="metric-label" data-i18n="metrics.regression">SmartCS regression cases</span>
-          </div>
-          <div class="metric live-metric">
-            <span class="metric-value" id="githubStars">--</span>
-            <span class="metric-label" data-i18n="metrics.stars">GitHub stars</span>
-          </div>
-        </div>
       </section>
 
       <section class="section section-grid" id="about" aria-labelledby="about-title">
@@ -104,26 +90,26 @@
           <span data-i18n="about.kicker">About</span>
         </div>
         <div class="section-main">
-          <h2 id="about-title" data-i18n="about.title">I care about AI systems that are observable, controllable, and actually useful.</h2>
+          <h2 id="about-title" data-i18n="about.title">I build AI applications with clear workflows and measurable behavior.</h2>
           <div class="about-layout">
             <p class="large-copy" data-i18n="about.copy">
-              My current work centers on AI application engineering: agent workflows, retrieval systems, safe tool execution, human confirmation, and regression evaluation. I like turning prototype-grade LLM ideas into software that has clear state, interfaces, tests, and operational visibility.
+              My work is grounded in software engineering practice: define product scenarios, design service state and APIs, connect retrieval and tools, then use harnesses, traces, and tests to keep behavior reproducible. I focus on making agent systems maintainable rather than only impressive in demos.
             </p>
             <div class="signal-list">
               <div class="signal">
                 <span>01</span>
-                <strong data-i18n="about.signal1.title">Agent product logic</strong>
-                <p data-i18n="about.signal1.copy">Designing workflows that bind LLM reasoning to explicit tasks, policies, cases, and user-visible state.</p>
+                <strong data-i18n="about.signal1.title">Application scenarios</strong>
+                <p data-i18n="about.signal1.copy">Translate support and developer workflows into explicit states, APIs, and user-facing interactions.</p>
               </div>
               <div class="signal">
                 <span>02</span>
-                <strong data-i18n="about.signal2.title">Engineering guardrails</strong>
-                <p data-i18n="about.signal2.copy">Building tool policies, confirmation gates, audit logs, sandbox boundaries, and rollback-friendly architecture.</p>
+                <strong data-i18n="about.signal2.title">Agent infrastructure</strong>
+                <p data-i18n="about.signal2.copy">Implement orchestration, retrieval, MCP-style tool integration, memory, and permission boundaries.</p>
               </div>
               <div class="signal">
                 <span>03</span>
-                <strong data-i18n="about.signal3.title">Evaluation habits</strong>
-                <p data-i18n="about.signal3.copy">Treating eval datasets, deterministic tests, screenshots, and CI checks as first-class parts of AI application development.</p>
+                <strong data-i18n="about.signal3.title">Quality system</strong>
+                <p data-i18n="about.signal3.copy">Use evaluation harnesses, trace records, CI checks, and screenshots to verify behavior across iterations.</p>
               </div>
             </div>
           </div>
@@ -166,7 +152,7 @@
           <span data-i18n="projects.kicker">Selected Projects</span>
         </div>
         <div class="section-main">
-          <h2 id="projects-title" data-i18n="projects.title">Self-built AI projects with real workflows.</h2>
+          <h2 id="projects-title" data-i18n="projects.title">Selected engineering projects in AI application development.</h2>
           <div class="projects">
             <article class="project-card project-large reveal">
               <div class="project-media">
@@ -183,9 +169,9 @@
                     <span>Human Confirm</span>
                   </div>
                   <div class="visual-console">
-                    <span>stream:event.tool_call</span>
-                    <span>risk: medium</span>
-                    <span>case: linked</span>
+                    <span>workflow</span>
+                    <span>policy</span>
+                    <span>handoff</span>
                   </div>
                 </div>
               </div>
@@ -201,7 +187,7 @@
                 <div class="project-points">
                   <span data-i18n="projects.smartcs.point1">Governed tool runtime</span>
                   <span data-i18n="projects.smartcs.point2">Case and ticket state</span>
-                  <span data-i18n="projects.smartcs.point3">51 deterministic eval cases</span>
+                  <span data-i18n="projects.smartcs.point3">Evaluation harness</span>
                 </div>
                 <a class="project-link" href="https://github.com/Nguxw/Smart_CS" target="_blank" rel="noreferrer">
                   <span data-i18n="projects.view">View Repository</span>
@@ -230,7 +216,7 @@
                   <div class="visual-console">
                     <span>skills: enabled</span>
                     <span>sandbox: guarded</span>
-                    <span>eval: 100 cases</span>
+                    <span>harness: ready</span>
                   </div>
                 </div>
               </div>
@@ -241,12 +227,12 @@
                 </div>
                 <h3>Mini-Hermes</h3>
                 <p data-i18n="projects.hermes.copy">
-                  A lightweight local AI agent workspace for project engineering. It combines model calls, reusable skills, durable memory, session recall, safe terminal execution, auditable traces, and a 100-case evaluation harness.
+                  A lightweight local AI agent workspace for project engineering. It combines model calls, reusable skills, durable memory, session recall, safe terminal execution, auditable traces, and evaluation harness support.
                 </p>
                 <div class="project-points">
                   <span data-i18n="projects.hermes.point1">Tool-using agent loop</span>
                   <span data-i18n="projects.hermes.point2">Skills and memory layer</span>
-                  <span data-i18n="projects.hermes.point3">100-case benchmark</span>
+                  <span data-i18n="projects.hermes.point3">Evaluation harness</span>
                 </div>
                 <a class="project-link" href="https://github.com/Nguxw/Mini_Hermes" target="_blank" rel="noreferrer">
                   <span data-i18n="projects.view">View Repository</span>
@@ -307,7 +293,7 @@
 
     <footer class="footer">
       <span>NGXW</span>
-      <p data-i18n="footer">Built as a static GitHub Pages portfolio for Xianwei Guo.</p>
+      <p data-i18n="footer">Last updated: May 2026 · Nguxw.github.io</p>
     </footer>
   </div>
 
