@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Xianwei Guo - AI Application and Agent Engineering portfolio.">
+  <meta name="theme-color" content="#080b0f">
+  <title>Xianwei Guo | AI Application & Agent Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header" id="top">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Xianwei Guo homepage">
+          <span class="brand-mark">NG</span>
+          <span class="brand-text">Xianwei Guo</span>
+        </a>
+        <div class="nav-links" aria-label="Page sections">
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#stack" data-i18n="nav.stack">Stack</a>
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#education" data-i18n="nav.education">Education</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </div>
+        <button class="lang-toggle" type="button" id="langToggle" aria-label="Switch language">
+          <span class="lang-current">EN</span>
+          <span class="lang-divider">/</span>
+          <span class="lang-alt">ZH</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero section-grid" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            <span data-i18n="hero.eyebrow">AI Application / Agent Engineering</span>
+          </div>
+          <h1 id="hero-title" data-i18n="hero.title">Building useful AI agents with product discipline.</h1>
+          <p class="hero-lead" data-i18n="hero.lead">
+            I am Xianwei Guo, an M.S. student in Software Engineering at Southeast University. I build governed AI applications, agent workflows, RAG systems, and evaluation-first developer tools.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">
+              <span data-i18n="hero.primary">View Projects</span>
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+            <a class="button button-secondary" href="mailto:xianwei.guo@foxmail.com">
+              <span data-i18n="hero.secondary">Email Me</span>
+            </a>
+            <a class="button button-ghost" href="https://github.com/Nguxw" target="_blank" rel="noreferrer">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.02c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.71 1.26 3.37.96.11-.75.41-1.26.74-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.05 0 0 .97-.31 3.17 1.18.92-.26 1.91-.38 2.89-.39.98.01 1.97.13 2.9.39 2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.79 1.07.79 2.16v3.04c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Profile snapshot">
+          <div class="portrait-wrap">
+            <img src="https://avatars.githubusercontent.com/u/94182896?v=4" alt="Xianwei Guo GitHub avatar" class="portrait">
+          </div>
+          <div class="terminal-card">
+            <div class="terminal-top">
+              <span></span><span></span><span></span>
+              <strong>profile.json</strong>
+            </div>
+            <pre><code>{
+  "name": "Xianwei Guo",
+  "role": "AI Agent Engineer",
+  "school": "Southeast University",
+  "focus": ["RAG", "Tool Use", "Eval"]
+}</code></pre>
+          </div>
+        </aside>
+
+        <div class="metric-strip" aria-label="Highlights">
+          <div class="metric">
+            <span class="metric-value">2</span>
+            <span class="metric-label" data-i18n="metrics.systems">Flagship agent systems</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">100</span>
+            <span class="metric-label" data-i18n="metrics.evals">Mini-Hermes eval cases</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">51</span>
+            <span class="metric-label" data-i18n="metrics.regression">SmartCS regression cases</span>
+          </div>
+          <div class="metric live-metric">
+            <span class="metric-value" id="githubStars">--</span>
+            <span class="metric-label" data-i18n="metrics.stars">GitHub stars</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-grid" id="about" aria-labelledby="about-title">
+        <div class="section-kicker">
+          <span data-i18n="about.kicker">About</span>
+        </div>
+        <div class="section-main">
+          <h2 id="about-title" data-i18n="about.title">I care about AI systems that are observable, controllable, and actually useful.</h2>
+          <div class="about-layout">
+            <p class="large-copy" data-i18n="about.copy">
+              My current work centers on AI application engineering: agent workflows, retrieval systems, safe tool execution, human confirmation, and regression evaluation. I like turning prototype-grade LLM ideas into software that has clear state, interfaces, tests, and operational visibility.
+            </p>
+            <div class="signal-list">
+              <div class="signal">
+                <span>01</span>
+                <strong data-i18n="about.signal1.title">Agent product logic</strong>
+                <p data-i18n="about.signal1.copy">Designing workflows that bind LLM reasoning to explicit tasks, policies, cases, and user-visible state.</p>
+              </div>
+              <div class="signal">
+                <span>02</span>
+                <strong data-i18n="about.signal2.title">Engineering guardrails</strong>
+                <p data-i18n="about.signal2.copy">Building tool policies, confirmation gates, audit logs, sandbox boundaries, and rollback-friendly architecture.</p>
+              </div>
+              <div class="signal">
+                <span>03</span>
+                <strong data-i18n="about.signal3.title">Evaluation habits</strong>
+                <p data-i18n="about.signal3.copy">Treating eval datasets, deterministic tests, screenshots, and CI checks as first-class parts of AI application development.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-grid section-muted" id="stack" aria-labelledby="stack-title">
+        <div class="section-kicker">
+          <span data-i18n="stack.kicker">Tech Stack</span>
+        </div>
+        <div class="section-main">
+          <h2 id="stack-title" data-i18n="stack.title">A practical stack for shipping AI applications.</h2>
+          <div class="stack-grid">
+            <article class="stack-card reveal">
+              <span class="stack-index">LANG</span>
+              <h3 data-i18n="stack.lang.title">Languages & UI</h3>
+              <p>Python, TypeScript, JavaScript, React, Vue, Vite</p>
+            </article>
+            <article class="stack-card reveal">
+              <span class="stack-index">API</span>
+              <h3 data-i18n="stack.api.title">Backend & Services</h3>
+              <p>FastAPI, Pydantic, SSE, PostgreSQL, Redis, REST APIs</p>
+            </article>
+            <article class="stack-card reveal">
+              <span class="stack-index">AI</span>
+              <h3 data-i18n="stack.ai.title">Agent & Retrieval</h3>
+              <p>LangGraph, RAG, Qdrant, embeddings, tool calling, prompt workflows</p>
+            </article>
+            <article class="stack-card reveal">
+              <span class="stack-index">OPS</span>
+              <h3 data-i18n="stack.ops.title">Engineering & Quality</h3>
+              <p>Docker, CI, pytest, eval harnesses, observability, screenshots</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-grid" id="projects" aria-labelledby="projects-title">
+        <div class="section-kicker">
+          <span data-i18n="projects.kicker">Selected Projects</span>
+        </div>
+        <div class="section-main">
+          <h2 id="projects-title" data-i18n="projects.title">Self-built AI projects with real workflows.</h2>
+          <div class="projects">
+            <article class="project-card project-large reveal">
+              <div class="project-media">
+                <div class="system-visual support-visual" aria-hidden="true">
+                  <div class="visual-topline">
+                    <span>ResolutionOps</span>
+                    <strong>LIVE</strong>
+                  </div>
+                  <div class="agent-flow">
+                    <span>Intent Router</span>
+                    <span>Case Binding</span>
+                    <span>RAG Evidence</span>
+                    <span>Tool Policy</span>
+                    <span>Human Confirm</span>
+                  </div>
+                  <div class="visual-console">
+                    <span>stream:event.tool_call</span>
+                    <span>risk: medium</span>
+                    <span>case: linked</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-meta">
+                  <span>01</span>
+                  <span>FastAPI · React · LangGraph · RAG</span>
+                </div>
+                <h3>SmartCS ResolutionOps Console</h3>
+                <p data-i18n="projects.smartcs.copy">
+                  A governed AI customer support operations console. It wraps an LLM agent with workflow contracts, service-case state, RAG evidence, policy-controlled tools, human confirmation, ticket handoff, SSE streaming, and regression evaluation.
+                </p>
+                <div class="project-points">
+                  <span data-i18n="projects.smartcs.point1">Governed tool runtime</span>
+                  <span data-i18n="projects.smartcs.point2">Case and ticket state</span>
+                  <span data-i18n="projects.smartcs.point3">51 deterministic eval cases</span>
+                </div>
+                <a class="project-link" href="https://github.com/Nguxw/Smart_CS" target="_blank" rel="noreferrer">
+                  <span data-i18n="projects.view">View Repository</span>
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card project-large project-reverse reveal">
+              <div class="project-media">
+                <div class="system-visual hermes-visual" aria-hidden="true">
+                  <div class="visual-topline">
+                    <span>Mini-Hermes</span>
+                    <strong>LOCAL</strong>
+                  </div>
+                  <div class="workspace-frame">
+                    <div class="workspace-sidebar">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <div class="workspace-chat">
+                      <p>agent.loop()</p>
+                      <p>tool.read_file -> observe</p>
+                      <p>memory.save -> recall</p>
+                    </div>
+                  </div>
+                  <div class="visual-console">
+                    <span>skills: enabled</span>
+                    <span>sandbox: guarded</span>
+                    <span>eval: 100 cases</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-meta">
+                  <span>02</span>
+                  <span>Python · FastAPI · Vue · SQLite</span>
+                </div>
+                <h3>Mini-Hermes</h3>
+                <p data-i18n="projects.hermes.copy">
+                  A lightweight local AI agent workspace for project engineering. It combines model calls, reusable skills, durable memory, session recall, safe terminal execution, auditable traces, and a 100-case evaluation harness.
+                </p>
+                <div class="project-points">
+                  <span data-i18n="projects.hermes.point1">Tool-using agent loop</span>
+                  <span data-i18n="projects.hermes.point2">Skills and memory layer</span>
+                  <span data-i18n="projects.hermes.point3">100-case benchmark</span>
+                </div>
+                <a class="project-link" href="https://github.com/Nguxw/Mini_Hermes" target="_blank" rel="noreferrer">
+                  <span data-i18n="projects.view">View Repository</span>
+                  <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-grid section-muted" id="education" aria-labelledby="education-title">
+        <div class="section-kicker">
+          <span data-i18n="education.kicker">Education</span>
+        </div>
+        <div class="section-main">
+          <h2 id="education-title" data-i18n="education.title">Software Engineering graduate student.</h2>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <span class="timeline-date" data-i18n="education.date">2025 - Present</span>
+              <div>
+                <h3 data-i18n="education.school">Southeast University</h3>
+                <p data-i18n="education.degree">M.S. student in Software Engineering</p>
+              </div>
+            </article>
+            <article class="timeline-item reveal">
+              <span class="timeline-date" data-i18n="education.focusLabel">Current Focus</span>
+              <div>
+                <h3 data-i18n="education.focusTitle">AI application engineering</h3>
+                <p data-i18n="education.focusCopy">Agent workflows, RAG systems, safe tool execution, observability, and evaluation-driven development.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-grid contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-kicker">
+          <span data-i18n="contact.kicker">Contact</span>
+        </div>
+        <div class="section-main">
+          <h2 id="contact-title" data-i18n="contact.title">Open to AI application and agent engineering opportunities.</h2>
+          <div class="contact-grid">
+            <a class="contact-card reveal" href="mailto:xianwei.guo@foxmail.com">
+              <span class="contact-label">Email</span>
+              <strong>xianwei.guo@foxmail.com</strong>
+              <span data-i18n="contact.email">Send a message</span>
+            </a>
+            <a class="contact-card reveal" href="https://github.com/Nguxw" target="_blank" rel="noreferrer">
+              <span class="contact-label">GitHub</span>
+              <strong>github.com/Nguxw</strong>
+              <span data-i18n="contact.github">Explore repositories</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>NGXW</span>
+      <p data-i18n="footer">Built as a static GitHub Pages portfolio for Xianwei Guo.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
