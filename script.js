@@ -55,6 +55,12 @@ const copy = {
         point1: "Tool-using agent loop",
         point2: "Skills and memory layer",
         point3: "Evaluation harness"
+      },
+      repomind: {
+        copy: "A repository evidence workbench that turns public GitHub repositories into citation-backed wiki pages and grounded Q&A. It combines repository ingestion, code intelligence, retrieval, a model gateway, and traceable agent runs.",
+        point1: "Citation-backed wiki",
+        point2: "Repository graph",
+        point3: "Traceable Q&A"
       }
     },
     education: {
@@ -73,7 +79,7 @@ const copy = {
       email: "Send a message",
       github: "Explore repositories"
     },
-    footer: "Last updated: May 2026 · Nguxw.github.io"
+    footer: "Last updated: June 2026 · Nguxw.github.io"
   },
   zh: {
     skip: "跳到正文",
@@ -131,6 +137,12 @@ const copy = {
         point1: "可调用工具的 Agent Loop",
         point2: "Skills 与记忆层",
         point3: "评测 Harness"
+      },
+      repomind: {
+        copy: "一个面向代码仓库理解的证据工作台，可将公开 GitHub 仓库整理为带引用的 Wiki 页面和基于证据的问答。项目覆盖仓库导入、代码结构分析、检索、模型网关和可追踪 Agent 运行。",
+        point1: "带引用的 Wiki",
+        point2: "仓库图谱",
+        point3: "可追踪问答"
       }
     },
     education: {
@@ -149,7 +161,7 @@ const copy = {
       email: "发送邮件",
       github: "查看仓库"
     },
-    footer: "最近更新：2026 年 5 月 · Nguxw.github.io"
+    footer: "最近更新：2026 年 6 月 · Nguxw.github.io"
   }
 };
 

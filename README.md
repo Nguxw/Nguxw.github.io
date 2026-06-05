@@ -10,7 +10,7 @@ The site is intentionally lightweight: plain HTML, CSS, and JavaScript, hosted b
 - Agent workflow engineering
 - RAG systems and tool execution
 - Evaluation-driven AI software
-- Featured self-built projects: SmartCS and Mini-Hermes
+- Featured self-built projects: SmartCS, Mini-Hermes, and RepoMind
 
 ## Files
 
