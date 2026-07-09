@@ -10,11 +10,12 @@ The site is intentionally lightweight: plain HTML, CSS, and JavaScript, hosted b
 - Agent workflow engineering
 - RAG systems and tool execution
 - Evaluation-driven AI software
+- Current internship: AI Application Development Engineer Intern at Tencent Technology (Shenzhen) Co., Ltd.
 - Featured self-built projects: SmartCS, Mini-Hermes, and RepoMind
 
 ## Files
 
 - `index.html` - page structure and content hooks
 - `style.css` - visual system and responsive layout
-- `script.js` - bilingual copy, language toggle, reveal effects, GitHub stats fallback
+- `script.js` - bilingual copy, language toggle, and reveal effects
 - `.nojekyll` - disables GitHub Pages Jekyll processing

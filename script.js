@@ -5,6 +5,7 @@ const copy = {
       about: "About",
       stack: "Stack",
       projects: "Projects",
+      experience: "Experience",
       education: "Education",
       contact: "Contact"
     },
@@ -63,6 +64,18 @@ const copy = {
         point3: "Traceable Q&A"
       }
     },
+    experience: {
+      kicker: "Experience",
+      title: "Current internship in AI application development.",
+      date: "Jun 2026 - Present",
+      type: "Internship",
+      company: "Tencent Technology (Shenzhen) Co., Ltd.",
+      role: "AI Application Development Engineer Intern",
+      copy: "Working as an AI Application Development Engineer Intern, contributing to AI application engineering with a focus on service implementation, workflow delivery, and reliable iteration.",
+      tag1: "AI Applications",
+      tag2: "Engineering Delivery",
+      tag3: "Workflow Implementation"
+    },
     education: {
       kicker: "Education",
       title: "Software Engineering graduate student.",
@@ -79,7 +92,7 @@ const copy = {
       email: "Send a message",
       github: "Explore repositories"
     },
-    footer: "Last updated: June 2026 · Nguxw.github.io"
+    footer: "Last updated: July 2026 · Nguxw.github.io"
   },
   zh: {
     skip: "跳到正文",
@@ -87,6 +100,7 @@ const copy = {
       about: "关于",
       stack: "技术栈",
       projects: "项目",
+      experience: "实习",
       education: "教育",
       contact: "联系"
     },
@@ -145,6 +159,18 @@ const copy = {
         point3: "可追踪问答"
       }
     },
+    experience: {
+      kicker: "实习经历",
+      title: "腾讯科技（深圳）有限公司 AI 应用开发实习。",
+      date: "2026 年 6 月 - 至今",
+      type: "实习",
+      company: "腾讯科技（深圳）有限公司",
+      role: "AI 应用开发工程师（实习）",
+      copy: "目前担任 AI 应用开发工程师实习生，参与 AI 应用工程相关工作，关注服务实现、工作流落地和可靠迭代。",
+      tag1: "AI 应用开发",
+      tag2: "工程交付",
+      tag3: "工作流实现"
+    },
     education: {
       kicker: "教育背景",
       title: "软件工程专业在读研究生。",
@@ -161,7 +187,7 @@ const copy = {
       email: "发送邮件",
       github: "查看仓库"
     },
-    footer: "最近更新：2026 年 6 月 · Nguxw.github.io"
+    footer: "最近更新：2026 年 7 月 · Nguxw.github.io"
   }
 };
 
