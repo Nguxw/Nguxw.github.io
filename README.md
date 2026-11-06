@@ -1,20 +1,13 @@
 # Nguxw.github.io
 
-Static personal resume site for Xianwei Guo.
+Bilingual personal résumé and engineering portfolio for Xianwei Guo. Built with static HTML, CSS, and JavaScript for [GitHub Pages](https://nguxw.github.io/).
 
-The site is intentionally lightweight: plain HTML, CSS, and JavaScript, hosted by GitHub Pages at <https://nguxw.github.io>.
+## Preview locally
 
-## Content Focus
+Run `python3 -m http.server 8765` from the repository root and open <http://127.0.0.1:8765/>.
 
-- AI application development
-- Agent workflow engineering
-- RAG systems and tool execution
-- Evaluation-driven AI software
-- Featured self-built projects: SmartCS, Mini-Hermes, and RepoMind
+## Update content
 
-## Files
+Edit the Chinese copy and its English `data-en` translations in `index.html`. English versions of accessibility labels and image descriptions use `data-en-label` and `data-en-alt`. The site uses the browser language on a first visit and remembers manual changes when storage is available.
 
-- `index.html` - page structure and content hooks
-- `style.css` - visual system and responsive layout
-- `script.js` - bilingual copy, language toggle, and reveal effects
-- `.nojekyll` - disables GitHub Pages Jekyll processing
+The [SmartCS console screenshot](https://github.com/Nguxw/Smart_CS/blob/main/docs/assets/screenshots/desk.png) is from the project's public repository. The font and screenshot licenses are in `assets/`.
