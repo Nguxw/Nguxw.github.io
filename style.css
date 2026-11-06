@@ -264,6 +264,19 @@ main:focus { outline: none; }
   border-block-start: 1px solid var(--line);
 }
 .experience:last-child { border-block-end: 1px solid var(--line); }
+.experience-company {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+.experience-logo {
+  flex: none;
+  padding: .36rem;
+  border: 1px solid var(--line);
+  border-radius: .6rem;
+  background: #fff;
+  object-fit: contain;
+}
 .experience-meta h3, .education-list h3, .more-project h3 {
   font-size: clamp(1.25rem, 2.4vw, 1.8rem);
   line-height: 1.23;
