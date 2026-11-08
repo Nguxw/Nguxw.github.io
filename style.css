@@ -86,6 +86,22 @@ img { display: block; max-inline-size: 100%; }
   border: 0;
   cursor: pointer;
 }
+.access-help {
+  margin-block-start: 1.25rem;
+  padding-block-start: .4rem;
+  border-block-start: 1px solid var(--line);
+  font-size: .92rem;
+}
+.access-help summary {
+  min-block-size: 2.75rem;
+  padding-block: .6rem;
+  color: var(--forest);
+  cursor: pointer;
+}
+.access-help summary:hover { text-decoration: underline; text-underline-offset: .22em; }
+.access-help p { color: var(--muted); }
+.access-help a { overflow-wrap: anywhere; }
+.access-help .access-hint { margin-block-start: .5rem; }
 .access-fallback { margin-block-start: 2rem; }
 
 .wrap {
