@@ -145,9 +145,12 @@
     </section>
 
     <div class="ticker" aria-hidden="true">
-      <div class="ticker-track">
-        <span>Java</span><span>TypeScript</span><span>Python</span><span>LangGraph</span><span>FastAPI</span><span>Redis</span><span>PostgreSQL</span><span>Qdrant</span><span>SQLite FTS5</span><span>Docker</span><span>React</span><span>Vue</span><span>SSE</span>
-        <span>Java</span><span>TypeScript</span><span>Python</span><span>LangGraph</span><span>FastAPI</span><span>Redis</span><span>PostgreSQL</span><span>Qdrant</span><span>SQLite FTS5</span><span>Docker</span><span>React</span><span>Vue</span><span>SSE</span>
+      <div class="ticker-track" id="ticker-track">
+        <div class="ticker-group">
+          <span class="ticker-label">@Taotian</span><span>Java</span><span>Spring Boot</span><span>MyBatis</span><span>HSF / RPC</span><span>MySQL</span>
+          <span class="ticker-label">@Tencent IEG</span><span>TypeScript</span><span>Bun</span><span>Node.js</span><span>Playwright</span><span>Redis</span><span>Docker</span>
+          <span class="ticker-label">@Projects</span><span>Python</span><span>FastAPI</span><span>LangGraph</span><span>Qdrant</span><span>PostgreSQL</span><span>SQLite FTS5</span><span>React</span><span>Vue</span>
+        </div>
       </div>
     </div>
 
@@ -176,6 +179,7 @@
               <li><strong data-en="Staging delivery">预发交付</strong><span data-en="Owned staging automation for approved changes, connecting code review, deployment authorization, and version verification. Added recovery that reuses existing artifacts after interruptions.">负责自动化预发交付，衔接代码评审、部署授权与版本核验，支持中断后复用已有产物并继续推进。</span></li>
               <li><strong data-en="Evaluation benchmark">研发评测</strong><span data-en="Built a benchmark from historical requirements, code changes, and acceptance criteria to evaluate clarification and technical proposals.">用历史需求、代码变更和验收条件搭建基准，评测需求澄清与技术方案的质量。</span></li>
             </ul>
+            <ul class="tech-list" role="list" aria-label="技术栈" data-en-label="Technologies"><li>Java</li><li>Spring Boot</li><li>MyBatis</li><li>HSF / RPC</li><li>MySQL</li></ul>
           </div>
         </article>
 
@@ -197,6 +201,7 @@
               <li><strong data-en="Browser handoff">浏览器接管</strong><span data-en="Helped integrate sandboxed browsers with remote preview and user takeover at login or confirmation steps. Improved session reuse and login-state recovery.">参与浏览器沙箱与远程接管，支持用户在登录或确认时接手操作，并完善会话复用和登录态恢复。</span></li>
               <li><strong data-en="Content generation">内容生成</strong><span data-en="Owned the slide generation and editing module, connecting structured drafts to previews and PPT exports. Iterated on web page generation and its integration with the Agent runtime.">负责 AI PPT 生成与编辑模块，用结构化文稿衔接预览编辑和导出，并迭代 AI 网页生成与运行时集成。</span></li>
             </ul>
+            <ul class="tech-list" role="list" aria-label="技术栈" data-en-label="Technologies"><li>TypeScript</li><li>Bun</li><li>Node.js</li><li>Playwright</li><li>Redis</li><li>Docker</li></ul>
           </div>
         </article>
       </div>
@@ -210,17 +215,17 @@
       </header>
       <div class="project-grid">
         <article class="project reveal" data-spotlight>
-          <figure class="project-visual hermes-visual">
+          <figure class="project-visual">
             <figcaption><span class="project-no" aria-hidden="true">P/01</span><span data-en="Execution flow">执行流程示意</span></figcaption>
-            <ol class="hermes-flow" role="list">
+            <ol class="flow" role="list">
               <li><span data-en="Start">发起任务</span><strong>Web / CLI</strong></li>
               <li><span data-en="Decide">循环决策</span><strong>Agent Loop</strong></li>
               <li><span data-en="Execute safely">受控执行</span><strong>File / Shell</strong></li>
             </ol>
-            <div class="hermes-feedback">
+            <p class="flow-note">
               <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M19 5v6a5 5 0 0 1-5 5H5m0 0 5-5m-5 5 5 5"/></svg>
               <span data-en="Tool results inform the next step">工具结果用于下一步决策</span>
-            </div>
+            </p>
           </figure>
           <div class="project-copy">
             <h3>Mini-Hermes</h3>
@@ -232,11 +237,17 @@
         </article>
 
         <article class="project reveal" data-spotlight>
-          <figure class="project-visual smartcs-visual">
-            <figcaption><span class="project-no" aria-hidden="true">P/02</span><span data-en="Project screenshot · Click to enlarge">项目界面截图 · 点击放大</span></figcaption>
-            <a class="screenshot-link" href="assets/smartcs-desk.webp" aria-label="查看 SmartCS 完整截图" data-en-label="View the full SmartCS screenshot">
-              <img src="assets/smartcs-desk.webp" width="1200" height="917" loading="lazy" decoding="async" alt="SmartCS 售后案件运营控制台界面" data-en-alt="SmartCS after-sales case operations console">
-            </a>
+          <figure class="project-visual">
+            <figcaption><span class="project-no" aria-hidden="true">P/02</span><span data-en="Case workflow">案件办理流程示意</span></figcaption>
+            <ol class="flow flow-gated" role="list">
+              <li><span data-en="Request">用户诉求</span><strong>Intake</strong></li>
+              <li><span data-en="Orchestrate">案件编排</span><strong>LangGraph</strong></li>
+              <li><span data-en="Check permissions">权限校验</span><strong>Tool Executor</strong></li>
+            </ol>
+            <p class="flow-note">
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+              <span data-en="Writes pause for human confirmation, then resume idempotently">写入前挂起等待人工确认，恢复时幂等去重</span>
+            </p>
           </figure>
           <div class="project-copy">
             <h3>SmartCS</h3>
@@ -246,16 +257,31 @@
             <a class="text-link" href="https://github.com/Nguxw/Smart_CS"><span data-en="View SmartCS source">查看 SmartCS 源码</span><svg class="icon" aria-hidden="true"><use href="#icon-out"/></svg></a>
           </div>
         </article>
+
+        <article class="project project-wide reveal" data-spotlight>
+          <figure class="project-visual">
+            <figcaption><span class="project-no" aria-hidden="true">P/03</span><span data-en="Repository pipeline">仓库理解流程示意</span></figcaption>
+            <ol class="flow flow-graph" role="list">
+              <li><span data-en="Parse source">解析源码</span><strong>Symbols</strong></li>
+              <li>
+                <svg class="graph-mark" viewBox="0 0 64 22" aria-hidden="true"><path d="M8 15 24 6l16 10 16-9M24 6v0M40 16 56 7"/><circle cx="8" cy="15" r="2.6"/><circle cx="24" cy="6" r="2.6"/><circle cx="40" cy="16" r="2.6"/><circle cx="56" cy="7" r="2.6"/></svg>
+                <span data-en="Build graph">构建图谱</span><strong>Code Graph</strong>
+              </li>
+              <li><span data-en="Read & ask">文档与问答</span><strong>Wiki / Q&amp;A</strong></li>
+            </ol>
+            <p class="flow-note">
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4m8-8 4 4-4 4M14 5l-4 14"/></svg>
+              <span data-en="Every answer cites the source it came from">回答附带源码引用，可回到实现核对</span>
+            </p>
+          </figure>
+          <div class="project-copy">
+            <h3>RepoMind</h3>
+            <p class="project-intro" data-en="RepoWiki turns public GitHub repositories into browsable code documentation.">RepoWiki 将公开 GitHub 仓库整理成可浏览的代码文档。</p>
+            <p class="project-detail" data-en="RepoMind extracts classes and functions from the source and builds a repository knowledge graph. The wiki links architecture and module pages to source files. Q&A retrieves wiki pages, graph evidence, and code snippets so readers can check answers against the implementation.">RepoMind 从源码中提取类和函数等符号，构建仓库知识图谱。Wiki 的架构与模块页面附有源码引用，问答结合 Wiki、图谱和代码片段检索，方便读者回到具体实现核对。</p>
+            <a class="text-link" href="https://github.com/Nguxw/RepoMind"><span data-en="View RepoMind source">查看 RepoMind 源码</span><svg class="icon" aria-hidden="true"><use href="#icon-out"/></svg></a>
+          </div>
+        </article>
       </div>
-      <article class="more-project reveal" data-spotlight>
-        <span class="project-no" aria-hidden="true">P/03</span>
-        <div class="more-project-copy">
-          <h3>RepoMind</h3>
-          <p class="project-intro" data-en="RepoWiki turns public GitHub repositories into browsable code documentation.">RepoWiki 将公开 GitHub 仓库整理成可浏览的代码文档。</p>
-          <p class="project-detail" data-en="RepoMind extracts classes and functions from the source and builds a repository knowledge graph. The wiki links architecture and module pages to source files. Q&A retrieves wiki pages, graph evidence, and code snippets so readers can check answers against the implementation.">RepoMind 从源码中提取类和函数等符号，构建仓库知识图谱。Wiki 的架构与模块页面附有源码引用，问答结合 Wiki、图谱和代码片段检索，方便读者回到具体实现核对。</p>
-        </div>
-        <a class="text-link" href="https://github.com/Nguxw/RepoMind"><span data-en="View RepoMind source">查看 RepoMind 源码</span><svg class="icon" aria-hidden="true"><use href="#icon-out"/></svg></a>
-      </article>
     </section>
 
     <section class="wrap section" id="stack" aria-labelledby="stack-title">
@@ -267,15 +293,15 @@
       <dl class="skills">
         <div class="reveal">
           <dt data-en="Backend & Agent runtime">后端与 Agent 运行时</dt>
-          <dd data-en="Java backend development, TypeScript and Python Agent runtimes, FastAPI, SSE, and LangGraph tool orchestration">Java 服务端开发、TypeScript 与 Python Agent 运行时、FastAPI、SSE 和 LangGraph 工具编排</dd>
+          <dd data-en="Java backend services with Spring Boot, MyBatis, and HSF; Agent runtimes in TypeScript (Bun, Node.js) and Python; FastAPI, SSE, and LangGraph tool orchestration">Java 服务端（Spring Boot、MyBatis、HSF），TypeScript（Bun、Node.js）与 Python Agent 运行时，FastAPI、SSE 和 LangGraph 工具编排</dd>
         </div>
         <div class="reveal">
           <dt data-en="Storage, caching & retrieval">存储、缓存与检索</dt>
-          <dd data-en="PostgreSQL for business data, Redis for runtime state, SQLite FTS5 for full-text search, and Qdrant for RAG">PostgreSQL 业务数据、Redis 运行状态、SQLite FTS5 全文检索和 Qdrant 向量检索（RAG）</dd>
+          <dd data-en="MySQL and PostgreSQL for business data, Redis for runtime state and locks, SQLite FTS5 for full-text search, and Qdrant for RAG">MySQL 与 PostgreSQL 业务数据、Redis 运行状态与分布式锁、SQLite FTS5 全文检索和 Qdrant 向量检索（RAG）</dd>
         </div>
         <div class="reveal">
           <dt data-en="Reliability & evaluation">可靠性与评测</dt>
-          <dd data-en="CAS for idempotency, distributed locks, task recovery, tool permissions, sandboxing, execution traces, and evaluation benchmarks">CAS 幂等控制、分布式锁、任务恢复、工具权限与沙箱、执行记录和评测基准</dd>
+          <dd data-en="CAS for idempotency, distributed locks, task recovery, tool permissions, Docker and Playwright browser sandboxes, execution traces, and evaluation benchmarks">CAS 幂等控制、分布式锁、任务恢复、工具权限、Docker 与 Playwright 浏览器沙箱、执行记录和评测基准</dd>
         </div>
         <div class="reveal">
           <dt data-en="Frontend & delivery">前端与交付</dt>

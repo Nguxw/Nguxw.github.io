@@ -147,6 +147,11 @@ const field = (() => {
   };
 })();
 
+/* ---------- Tech ticker ---------- */
+// The track scrolls by half its width, so a second copy makes the loop seamless.
+const tickerTrack = document.querySelector("#ticker-track");
+tickerTrack.append(tickerTrack.firstElementChild.cloneNode(true));
+
 /* ---------- Live execution trace ---------- */
 function startTrace() {
   const log = document.querySelector("#trace-log");
