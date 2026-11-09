@@ -8,6 +8,8 @@ const accessKey = document.querySelector("#access-key");
 const accessError = document.querySelector("#access-error");
 const main = document.querySelector("#main");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+// Set to true to require the access key again before the site is shown.
+const accessGateEnabled = false;
 const profileMetadata = {
   zh: {
     title: "Xianwei Guo | AI 应用开发与 Agent 工程",
@@ -240,7 +242,7 @@ accessKey.addEventListener("input", () => {
   accessError.textContent = "";
 });
 
-function unlock() {
+function unlock({ moveFocus = true } = {}) {
   for (const element of document.querySelectorAll("[data-requires-key]")) {
     element.hidden = false;
   }
@@ -248,7 +250,7 @@ function unlock() {
   accessDialog.close();
   accessDialog.classList.remove("is-leaving");
   applyLanguage(language);
-  main.focus({ preventScroll: true });
+  if (moveFocus) main.focus({ preventScroll: true });
   document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: "instant" });
   startPage();
 }
@@ -275,4 +277,8 @@ accessForm.addEventListener("submit", (event) => {
   setTimeout(unlock, 420);
 });
 
-accessDialog.showModal();
+if (accessGateEnabled) {
+  accessDialog.showModal();
+} else {
+  unlock({ moveFocus: false });
+}
