@@ -379,7 +379,8 @@ main:focus { outline: none; }
 }
 .hero h1 .line { display: block; padding-block-end: .06em; overflow: hidden; }
 .hero h1 .line > span { display: inline-block; }
-.hero h1 .line-offset { padding-inline-start: .9em; }
+/* The serif "G" rises above the tight line box; pad the mask so it is not clipped. */
+.hero h1 .line-offset { padding-block-start: .3em; margin-block-start: -.3em; padding-inline-start: .9em; }
 .hero h1 em {
   font-family: var(--serif);
   font-weight: 400;
