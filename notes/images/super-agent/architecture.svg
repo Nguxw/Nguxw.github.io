@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="t d">
+  <title id="t">Super-agent 双层架构示意</title>
+  <desc id="d">事件经两级过滤进入 Router，Router 把任务分派给各自隔离上下文的 Worker；Thread 订阅让后续事件直达 Worker；状态、计算与执行环境分离。</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#ffffff0d"/></pattern>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#9b9994"/></marker>
+    <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#ff5a1f"/></marker>
+  </defs>
+  <style>
+    text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif; fill: #edece8; }
+    .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    .s { font-size: 13px; fill: #9b9994; }
+    .xs { font-size: 12px; fill: #6b6a66; }
+    .b { font-size: 16px; font-weight: 600; }
+    .box { fill: #151517; stroke: #ffffff2e; }
+    .line { stroke: #9b9994; stroke-width: 1.4; fill: none; }
+  </style>
+
+  <rect width="960" height="600" fill="#0e0e10"/>
+  <rect width="960" height="600" fill="url(#grid)"/>
+  <text x="32" y="40" class="mono" font-size="12" fill="#ff5a1f" letter-spacing="1.5">FIG.1</text>
+  <text x="84" y="40" class="s">设计文章中的双层架构</text>
+
+  <!-- Sources -->
+  <text x="32" y="96" class="xs mono" letter-spacing="1">事件来源</text>
+  <rect class="box" x="32" y="110" width="160" height="48" rx="6"/><text x="112" y="140" text-anchor="middle" class="b">GitHub</text>
+  <rect class="box" x="32" y="176" width="160" height="48" rx="6"/><text x="112" y="206" text-anchor="middle" class="b">飞书 / IM</text>
+  <rect class="box" x="32" y="242" width="160" height="48" rx="6"/><text x="112" y="272" text-anchor="middle" class="b">其他 Trigger</text>
+
+  <path class="line" d="M192 134 C 222 134, 222 200, 250 200" marker-end="url(#a)"/>
+  <path class="line" d="M192 200 H 250" marker-end="url(#a)"/>
+  <path class="line" d="M192 266 C 222 266, 222 200, 250 200" marker-end="url(#a)"/>
+
+  <!-- Filter -->
+  <rect class="box" x="252" y="146" width="176" height="108" rx="6"/>
+  <text x="340" y="176" text-anchor="middle" class="b">两级过滤</text>
+  <text x="340" y="204" text-anchor="middle" class="s">① 确定性代码</text>
+  <text x="340" y="228" text-anchor="middle" class="s">② LLM 判断</text>
+  <path class="line" d="M428 200 H 478" marker-end="url(#a)"/>
+
+  <!-- Human -->
+  <circle cx="570" cy="74" r="20" fill="none" stroke="#edece8" stroke-width="1.4"/>
+  <text x="570" y="80" text-anchor="middle" font-size="15">人</text>
+  <path class="line" d="M570 96 V 136" marker-start="url(#a)" marker-end="url(#a)"/>
+  <text x="586" y="122" class="xs">唯一的对话入口</text>
+
+  <!-- Router -->
+  <rect x="480" y="140" width="180" height="120" rx="8" fill="#ff5a1f"/>
+  <text x="570" y="180" text-anchor="middle" font-size="22" font-weight="700" style="fill:#0b0b0c">Router</text>
+  <text x="570" y="206" text-anchor="middle" font-size="14" font-weight="600" style="fill:#0b0b0c">协调层</text>
+  <text x="570" y="234" text-anchor="middle" font-size="12.5" style="fill:#0b0b0cbb">交互 · 分派 · 不直接执行</text>
+
+  <!-- Workers -->
+  <text x="720" y="92" class="xs mono" letter-spacing="1">执行层</text>
+  <rect class="box" x="720" y="104" width="208" height="62" rx="6"/>
+  <text x="736" y="130" class="b">Worker A</text><text x="736" y="152" class="s">隔离上下文 · 完整执行工具</text>
+  <rect class="box" x="720" y="182" width="208" height="62" rx="6"/>
+  <text x="736" y="208" class="b">Worker B</text><text x="736" y="230" class="s">隔离上下文 · 完整执行工具</text>
+  <rect class="box" x="720" y="260" width="208" height="110" rx="6"/>
+  <text x="736" y="286" class="b">Worker C</text><text x="736" y="308" class="s">内部还可以再拆分</text>
+  <rect x="736" y="322" width="84" height="32" rx="5" fill="none" stroke="#ffffff2e" stroke-dasharray="4 3"/><text x="778" y="343" text-anchor="middle" class="s">Subagent</text>
+  <rect x="828" y="322" width="84" height="32" rx="5" fill="none" stroke="#ffffff2e" stroke-dasharray="4 3"/><text x="870" y="343" text-anchor="middle" class="s">Subagent</text>
+
+  <path d="M660 186 C 690 186, 690 135, 716 135" stroke="#ff5a1f" stroke-width="1.6" fill="none" marker-end="url(#ao)"/>
+  <path d="M660 200 H 716" stroke="#ff5a1f" stroke-width="1.6" fill="none" marker-end="url(#ao)"/>
+  <path d="M660 214 C 690 214, 690 300, 716 300" stroke="#ff5a1f" stroke-width="1.6" fill="none" marker-end="url(#ao)"/>
+  <text x="664" y="280" class="xs">分派</text>
+  <path class="line" d="M716 236 C 700 250, 680 256, 664 252" stroke-dasharray="4 3" marker-end="url(#a)"/>
+
+  <!-- Watchdog -->
+  <rect x="480" y="300" width="180" height="64" rx="6" fill="#151517" stroke="#ffb54766"/>
+  <text x="570" y="326" text-anchor="middle" class="b" style="fill:#ffb547">Watchdog</text>
+  <text x="570" y="348" text-anchor="middle" class="s">定时检查故障与真实进展</text>
+  <path d="M660 332 H 716" stroke="#ffb54766" stroke-width="1.4" stroke-dasharray="4 3" fill="none"/>
+
+  <text x="570" y="390" class="xs" text-anchor="middle">Worker 不直接对人，向 Router 汇报</text>
+
+  <!-- Thread subscription -->
+  <path d="M112 290 V 406 H 824 V 374" stroke="#9b9994" stroke-width="1.4" stroke-dasharray="5 4" fill="none" marker-end="url(#a)"/>
+  <text x="300" y="426" class="s">Thread 订阅：PR、IM 话题的后续事件直接送达对应 Worker</text>
+
+  <!-- Separation strip -->
+  <text x="32" y="474" class="xs mono" letter-spacing="1">状态、计算与执行环境分离</text>
+  <rect class="box" x="32" y="488" width="288" height="56" rx="6"/>
+  <text x="48" y="512" class="b">状态</text><text x="48" y="533" class="s">会话状态存放在数据库</text>
+  <rect class="box" x="336" y="488" width="288" height="56" rx="6"/>
+  <text x="352" y="512" class="b">计算</text><text x="352" y="533" class="s">Agent Loop 运行在无状态云端容器</text>
+  <rect class="box" x="640" y="488" width="288" height="56" rx="6"/>
+  <text x="656" y="512" class="b">执行环境</text><text x="656" y="533" class="s">留在用户机器，经轻量守护进程连接</text>
+
+  <text x="32" y="580" class="xs">依据《Super-agent 设计探索》整理。公开原型 dsh-superagent-prototype 的实现与此不完全相同。</text>
+</svg>

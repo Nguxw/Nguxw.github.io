@@ -1,0 +1,11 @@
+[
+  {
+    "slug": "deepseek-super-agent",
+    "date": "2026-11-06",
+    "title": "从 DeepSeek Super-agent 看 Agent 的下一步",
+    "title_en": "What DeepSeek’s Super-agent says about where agents go next",
+    "summary": "DeepSeek 近期公开了 Super-agent 的设计文章与研究原型。本文结合我在长任务与 Agent 平台方面的实践，分析这套设计的价值、尚待解决的问题，以及社区讨论中的主要分歧。",
+    "summary_en": "DeepSeek recently published its Super-agent design and a research prototype. Drawing on my work on long-running tasks and agent platforms, this note examines what the design offers, what remains unresolved, and where the community disagrees.",
+    "tags": ["Agent", "Harness", "Architecture"]
+  }
+]

@@ -1,4 +1,3 @@
-const languageButton = document.querySelector("#langToggle");
 const description = document.querySelector('meta[name="description"]');
 const accessDialog = document.querySelector("#access-dialog");
 const accessTitle = document.querySelector("#access-title");
@@ -21,51 +20,13 @@ const profileMetadata = {
   }
 };
 
-const translations = [...document.querySelectorAll("[data-en], [data-en-label], [data-en-alt]")].map((element) => ({
-  element,
-  text: element.dataset.en === undefined ? undefined : element.textContent,
-  label: element.getAttribute("aria-label"),
-  alt: element.getAttribute("alt")
-}));
-
-function applyLanguage(language) {
-  const isEnglish = language === "en";
-
-  document.documentElement.lang = isEnglish ? "en" : "zh-CN";
-
-  for (const { element, text, label, alt } of translations) {
-    if (text !== undefined) element.textContent = isEnglish ? element.dataset.en : text;
-    if (element.dataset.enLabel) element.setAttribute("aria-label", isEnglish ? element.dataset.enLabel : label);
-    if (element.dataset.enAlt) element.setAttribute("alt", isEnglish ? element.dataset.enAlt : alt);
-  }
-
-  languageButton.textContent = isEnglish ? "中文" : "English";
-  languageButton.lang = isEnglish ? "zh-CN" : "en";
-
+function applyMetadata(language) {
   const profile = profileMetadata[language];
   document.title = main.hidden ? accessTitle.textContent : profile.title;
   description.content = main.hidden ? accessDescription.textContent : profile.description;
 }
-
-let language = navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en";
-try {
-  const savedLanguage = localStorage.getItem("preferred-language");
-  if (savedLanguage === "zh" || savedLanguage === "en") language = savedLanguage;
-} catch {
-  // Browsers can restrict storage. The switch still works for the current page.
-}
-
-applyLanguage(language);
-languageButton.hidden = false;
-languageButton.addEventListener("click", () => {
-  language = language === "zh" ? "en" : "zh";
-  applyLanguage(language);
-  try {
-    localStorage.setItem("preferred-language", language);
-  } catch {
-    // The current page already reflects the selected language.
-  }
-});
+siteLanguage.onChange(applyMetadata);
+applyMetadata(siteLanguage.language);
 
 /* ---------- Background dot field ---------- */
 const field = (() => {
@@ -254,7 +215,7 @@ function unlock({ moveFocus = true } = {}) {
   accessForm.reset();
   accessDialog.close();
   accessDialog.classList.remove("is-leaving");
-  applyLanguage(language);
+  siteLanguage.apply();
   if (moveFocus) main.focus({ preventScroll: true });
   document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: "instant" });
   startPage();
@@ -268,7 +229,7 @@ accessForm.addEventListener("submit", (event) => {
     accessKey.removeAttribute("aria-invalid");
     void accessKey.offsetWidth;
     accessKey.setAttribute("aria-invalid", "true");
-    accessError.textContent = language === "en" ? "Incorrect access key. Try again." : "密钥不正确，请重试。";
+    accessError.textContent = siteLanguage.language === "en" ? "Incorrect access key. Try again." : "密钥不正确，请重试。";
     accessKey.focus();
     accessKey.select();
     return;
