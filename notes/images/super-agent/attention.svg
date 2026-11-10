@@ -8,6 +8,56 @@
     .s { font-size: 13px; fill: #9b9994; }
     .xs { font-size: 12px; fill: #6b6a66; }
     .b { font-size: 16px; font-weight: 600; }
+    .bar { transform-box: fill-box; transform-origin: 50% 100%; }
+    @keyframes k1 { 0%, 3.33% { fill: #151517; stroke: #ffffff2e; } 5.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k2 { 0%, 4.33% { fill: #151517; stroke: #ffffff2e; } 6.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k3 { 0%, 5.33% { fill: #151517; stroke: #ffffff2e; } 7.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k4 { 0%, 6.33% { fill: #151517; stroke: #ffffff2e; } 8.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k5 { 0%, 7.33% { fill: #151517; stroke: #ffffff2e; } 9.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k6 { 0%, 8.33% { fill: #151517; stroke: #ffffff2e; } 10.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k7 { 0%, 9.33% { fill: #151517; stroke: #ffffff2e; } 11.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k8 { 0%, 10.33% { fill: #151517; stroke: #ffffff2e; } 12.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k9 { 0%, 11.33% { fill: #151517; stroke: #ffffff2e; } 13.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k10 { 0%, 12.33% { fill: #151517; stroke: #ffffff2e; } 14.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k11 { 0%, 13.33% { fill: #151517; stroke: #ffffff2e; } 15.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k12 { 0%, 14.33% { fill: #151517; stroke: #ffffff2e; } 16.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k13 { 0%, 15.33% { fill: #151517; stroke: #ffffff2e; } 17.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k14 { 0%, 16.33% { fill: #151517; stroke: #ffffff2e; } 18.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k15 { 0%, 17.33% { fill: #151517; stroke: #ffffff2e; } 19.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k16 { 0%, 18.33% { fill: #151517; stroke: #ffffff2e; } 20.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k17 { 0%, 19.33% { fill: #151517; stroke: #ffffff2e; } 21.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k18 { 0%, 20.33% { fill: #151517; stroke: #ffffff2e; } 22.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k19 { 0%, 21.33% { fill: #151517; stroke: #ffffff2e; } 23.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k20 { 0%, 22.33% { fill: #151517; stroke: #ffffff2e; } 24.00%, 91.11% { fill: #2a2a2f; stroke: #edece8; } 97.78%, 100% { fill: #151517; stroke: #ffffff2e; } }
+    @keyframes k21 { 0%, 6.67% { opacity: .12; } 8.89%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k22 { 0%, 10.00% { opacity: .12; } 12.22%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k23 { 0%, 13.33% { opacity: .12; } 15.56%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k24 { 0%, 16.67% { opacity: .12; } 18.89%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k25 { 0%, 20.00% { opacity: .12; } 22.22%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k26 { 0%, 23.33% { opacity: .12; } 25.56%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k27 { 0%, 26.67% { opacity: .12; } 28.89%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k28 { 0%, 30.00% { opacity: .12; } 32.22%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k29 { 0%, 33.33% { opacity: .12; } 35.56%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k30 { 0%, 36.67% { opacity: .12; } 38.89%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k31 { 0%, 40.00% { opacity: .12; } 42.22%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k32 { 0%, 43.33% { opacity: .12; } 45.56%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k33 { 0%, 25.56% { opacity: .12; } 27.78%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k34 { 0%, 26.89% { opacity: .12; } 29.11%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k35 { 0%, 28.22% { opacity: .12; } 30.44%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k36 { 0%, 29.56% { opacity: .12; } 31.78%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k37 { 0%, 30.89% { opacity: .12; } 33.11%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k38 { 0%, 32.22% { opacity: .12; } 34.44%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k39 { 0%, 33.56% { opacity: .12; } 35.78%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k40 { 0%, 34.89% { opacity: .12; } 37.11%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: .12; } }
+    @keyframes k41 { 0%, 47.78% { transform: scaleY(0); } 52.78%, 91.11% { transform: scaleY(1); } 97.78%, 100% { transform: scaleY(0); } }
+    @keyframes k42 { 0%, 51.11% { opacity: 0; } 54.44%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: 0; } }
+    @keyframes k43 { 0%, 53.33% { transform: scaleY(0); } 58.33%, 91.11% { transform: scaleY(1); } 97.78%, 100% { transform: scaleY(0); } }
+    @keyframes k44 { 0%, 56.67% { opacity: 0; } 60.00%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: 0; } }
+    @keyframes k45 { 0%, 58.89% { transform: scaleY(0); } 63.89%, 91.11% { transform: scaleY(1); } 97.78%, 100% { transform: scaleY(0); } }
+    @keyframes k46 { 0%, 62.22% { opacity: 0; } 65.56%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: 0; } }
+    @keyframes k47 { 0%, 64.44% { transform: scaleY(0); } 69.44%, 91.11% { transform: scaleY(1); } 97.78%, 100% { transform: scaleY(0); } }
+    @keyframes k48 { 0%, 67.78% { opacity: 0; } 71.11%, 91.11% { opacity: 1; } 97.78%, 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { rect, text { animation: none !important; } }
   </style>
   <rect width="960" height="496" fill="#0e0e10"/>
   <rect width="960" height="496" fill="url(#grid)"/>
@@ -18,63 +68,63 @@
   <text x="928" y="90" text-anchor="end" class="s">增加 Worker 只会让这一行更长</text>
   <text x="32" y="180" class="b">一个人每小时能验收 12 项</text>
   <text x="928" y="180" text-anchor="end" class="s">每项检查 5 分钟 → 60 ÷ 5 = 12</text>
-  <rect x="32" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="66" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="100" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="134" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="168" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="202" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="236" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="270" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="304" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="338" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="372" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="406" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="440" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="474" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="508" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="542" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="576" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="610" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="644" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="678" y="106" width="26" height="26" rx="4" fill="#151517" stroke="#ffffff2e"/>
-  <rect x="32" y="196" width="26" height="26" rx="4" fill="#8fe3b8"/>
-  <rect x="66" y="196" width="26" height="26" rx="4" fill="#8fe3b8"/>
-  <rect x="100" y="196" width="26" height="26" rx="4" fill="#8fe3b8"/>
-  <rect x="134" y="196" width="26" height="26" rx="4" fill="#8fe3b8"/>
-  <rect x="168" y="196" width="26" height="26" rx="4" fill="#8fe3b8"/>
-  <rect x="202" y="196" width="26" height="26" rx="4" fill="#8fe3b8"/>
-  <rect x="236" y="196" width="26" height="26" rx="4" fill="#8fe3b8"/>
-  <rect x="270" y="196" width="26" height="26" rx="4" fill="#8fe3b8"/>
-  <rect x="304" y="196" width="26" height="26" rx="4" fill="#8fe3b8"/>
-  <rect x="338" y="196" width="26" height="26" rx="4" fill="#8fe3b8"/>
-  <rect x="372" y="196" width="26" height="26" rx="4" fill="#8fe3b8"/>
-  <rect x="406" y="196" width="26" height="26" rx="4" fill="#8fe3b8"/>
-  <rect x="440" y="196" width="26" height="26" rx="4" fill="#ff5a1f"/>
-  <rect x="474" y="196" width="26" height="26" rx="4" fill="#ff5a1f"/>
-  <rect x="508" y="196" width="26" height="26" rx="4" fill="#ff5a1f"/>
-  <rect x="542" y="196" width="26" height="26" rx="4" fill="#ff5a1f"/>
-  <rect x="576" y="196" width="26" height="26" rx="4" fill="#ff5a1f"/>
-  <rect x="610" y="196" width="26" height="26" rx="4" fill="#ff5a1f"/>
-  <rect x="644" y="196" width="26" height="26" rx="4" fill="#ff5a1f"/>
-  <rect x="678" y="196" width="26" height="26" rx="4" fill="#ff5a1f"/>
+  <rect x="32" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k1 9s infinite" stroke-opacity=".55"/>
+  <rect x="66" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k2 9s infinite" stroke-opacity=".55"/>
+  <rect x="100" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k3 9s infinite" stroke-opacity=".55"/>
+  <rect x="134" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k4 9s infinite" stroke-opacity=".55"/>
+  <rect x="168" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k5 9s infinite" stroke-opacity=".55"/>
+  <rect x="202" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k6 9s infinite" stroke-opacity=".55"/>
+  <rect x="236" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k7 9s infinite" stroke-opacity=".55"/>
+  <rect x="270" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k8 9s infinite" stroke-opacity=".55"/>
+  <rect x="304" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k9 9s infinite" stroke-opacity=".55"/>
+  <rect x="338" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k10 9s infinite" stroke-opacity=".55"/>
+  <rect x="372" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k11 9s infinite" stroke-opacity=".55"/>
+  <rect x="406" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k12 9s infinite" stroke-opacity=".55"/>
+  <rect x="440" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k13 9s infinite" stroke-opacity=".55"/>
+  <rect x="474" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k14 9s infinite" stroke-opacity=".55"/>
+  <rect x="508" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k15 9s infinite" stroke-opacity=".55"/>
+  <rect x="542" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k16 9s infinite" stroke-opacity=".55"/>
+  <rect x="576" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k17 9s infinite" stroke-opacity=".55"/>
+  <rect x="610" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k18 9s infinite" stroke-opacity=".55"/>
+  <rect x="644" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k19 9s infinite" stroke-opacity=".55"/>
+  <rect x="678" y="106" width="26" height="26" rx="4" style="fill:#2a2a2f;stroke:#edece8;animation:k20 9s infinite" stroke-opacity=".55"/>
+  <rect x="32" y="196" width="26" height="26" rx="4" fill="#8fe3b8" style="animation:k21 9s infinite"/>
+  <rect x="66" y="196" width="26" height="26" rx="4" fill="#8fe3b8" style="animation:k22 9s infinite"/>
+  <rect x="100" y="196" width="26" height="26" rx="4" fill="#8fe3b8" style="animation:k23 9s infinite"/>
+  <rect x="134" y="196" width="26" height="26" rx="4" fill="#8fe3b8" style="animation:k24 9s infinite"/>
+  <rect x="168" y="196" width="26" height="26" rx="4" fill="#8fe3b8" style="animation:k25 9s infinite"/>
+  <rect x="202" y="196" width="26" height="26" rx="4" fill="#8fe3b8" style="animation:k26 9s infinite"/>
+  <rect x="236" y="196" width="26" height="26" rx="4" fill="#8fe3b8" style="animation:k27 9s infinite"/>
+  <rect x="270" y="196" width="26" height="26" rx="4" fill="#8fe3b8" style="animation:k28 9s infinite"/>
+  <rect x="304" y="196" width="26" height="26" rx="4" fill="#8fe3b8" style="animation:k29 9s infinite"/>
+  <rect x="338" y="196" width="26" height="26" rx="4" fill="#8fe3b8" style="animation:k30 9s infinite"/>
+  <rect x="372" y="196" width="26" height="26" rx="4" fill="#8fe3b8" style="animation:k31 9s infinite"/>
+  <rect x="406" y="196" width="26" height="26" rx="4" fill="#8fe3b8" style="animation:k32 9s infinite"/>
+  <rect x="440" y="196" width="26" height="26" rx="4" fill="#ff5a1f" style="animation:k33 9s infinite"/>
+  <rect x="474" y="196" width="26" height="26" rx="4" fill="#ff5a1f" style="animation:k34 9s infinite"/>
+  <rect x="508" y="196" width="26" height="26" rx="4" fill="#ff5a1f" style="animation:k35 9s infinite"/>
+  <rect x="542" y="196" width="26" height="26" rx="4" fill="#ff5a1f" style="animation:k36 9s infinite"/>
+  <rect x="576" y="196" width="26" height="26" rx="4" fill="#ff5a1f" style="animation:k37 9s infinite"/>
+  <rect x="610" y="196" width="26" height="26" rx="4" fill="#ff5a1f" style="animation:k38 9s infinite"/>
+  <rect x="644" y="196" width="26" height="26" rx="4" fill="#ff5a1f" style="animation:k39 9s infinite"/>
+  <rect x="678" y="196" width="26" height="26" rx="4" fill="#ff5a1f" style="animation:k40 9s infinite"/>
   <line x1="436.0" y1="188" x2="436.0" y2="238" stroke="#edece8" stroke-dasharray="3 3"/>
   <text x="32" y="262" class="s"><tspan fill="#8fe3b8">■</tspan> 已验收　<tspan fill="#ff5a1f">■</tspan> 进入待审队列：每小时 +8</text>
 
   <text x="600" y="306" class="b">待审队列</text>
   <text x="600" y="330" class="s">没有返工时，也在线性增长</text>
   <line x1="32" y1="426" x2="560" y2="426" stroke="#ffffff2e"/>
-  <rect x="32" y="400.4" width="96" height="25.6" rx="4" fill="#ff5a1f" opacity="0.63"/>
-  <text x="80.0" y="390.4" text-anchor="middle" class="mono" font-size="15" font-weight="600">8</text>
+  <rect x="32" y="400.4" width="96" height="25.6" rx="4" fill="#ff5a1f" opacity="0.63" class="bar" style="animation:k41 9s infinite"/>
+  <text x="80.0" y="390.4" text-anchor="middle" class="mono" font-size="15" font-weight="600" style="animation:k42 9s infinite">8</text>
   <text x="80.0" y="448" text-anchor="middle" class="s">第 1 小时</text>
-  <rect x="168" y="374.8" width="96" height="51.2" rx="4" fill="#ff5a1f" opacity="0.81"/>
-  <text x="216.0" y="364.8" text-anchor="middle" class="mono" font-size="15" font-weight="600">16</text>
+  <rect x="168" y="374.8" width="96" height="51.2" rx="4" fill="#ff5a1f" opacity="0.81" class="bar" style="animation:k43 9s infinite"/>
+  <text x="216.0" y="364.8" text-anchor="middle" class="mono" font-size="15" font-weight="600" style="animation:k44 9s infinite">16</text>
   <text x="216.0" y="448" text-anchor="middle" class="s">第 2 小时</text>
-  <rect x="304" y="349.2" width="96" height="76.80000000000001" rx="4" fill="#ff5a1f" opacity="0.99"/>
-  <text x="352.0" y="339.2" text-anchor="middle" class="mono" font-size="15" font-weight="600">24</text>
+  <rect x="304" y="349.2" width="96" height="76.80000000000001" rx="4" fill="#ff5a1f" opacity="0.99" class="bar" style="animation:k45 9s infinite"/>
+  <text x="352.0" y="339.2" text-anchor="middle" class="mono" font-size="15" font-weight="600" style="animation:k46 9s infinite">24</text>
   <text x="352.0" y="448" text-anchor="middle" class="s">第 3 小时</text>
-  <rect x="440" y="323.6" width="96" height="102.4" rx="4" fill="#ff5a1f" opacity="1.17"/>
-  <text x="488.0" y="313.6" text-anchor="middle" class="mono" font-size="15" font-weight="600">32</text>
+  <rect x="440" y="323.6" width="96" height="102.4" rx="4" fill="#ff5a1f" opacity="1.17" class="bar" style="animation:k47 9s infinite"/>
+  <text x="488.0" y="313.6" text-anchor="middle" class="mono" font-size="15" font-weight="600" style="animation:k48 9s infinite">32</text>
   <text x="488.0" y="448" text-anchor="middle" class="s">第 4 小时</text>
 
   <text x="600" y="386" class="s">要改善的是验收效率：</text>

@@ -6,7 +6,7 @@
 
 ## 设计文章、研究原型与底座
 
-这篇文章题为《Super-agent 设计探索：迈向更自主的 Agent 系统》，我阅读的是[华尔街见闻 11 月 1 日的转载版本][wscn]。作者在开篇即说明，文章并非对 DeepSeek Harness 现有产品功能的介绍。
+这篇文章是 DeepSeek Harness 团队于 10 月 31 日发布的[《Super-agent 设计探索：迈向更自主的 Agent 系统》][wscn]。作者在开篇即说明，文章并非对 DeepSeek Harness 现有产品功能的介绍。
 
 文章的核心设计包括以下几个方面：
 
@@ -187,7 +187,7 @@ DeepSeek 自身的初步实验也应在其适用范围内理解。该实验以�
 
 ### 参考资料
 
-1. DeepSeek Harness 团队，《Super-agent 设计探索：迈向更自主的 Agent 系统》，[华尔街见闻转载][wscn]，2026-11-01
+1. DeepSeek Harness 团队，《Super-agent 设计探索：迈向更自主的 Agent 系统》，DeepSeek Harness 官方公众号，2026-10-31（[全文][wscn]）
 2. [deepseek-ai/dsh-superagent-prototype][proto]（研究原型，MIT）
 3. 原型文档：[000-philosophy][philosophy]、[002-authorization][auth]、[007-architecture][arch]
 4. Elvis（@omarsar0），[X 上的讨论][elvis]，2026-11-01

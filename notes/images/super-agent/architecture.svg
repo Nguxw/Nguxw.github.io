@@ -5,6 +5,7 @@
     <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#ffffff0d"/></pattern>
     <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#9b9994"/></marker>
     <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#ff5a1f"/></marker>
+  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="halo" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10"/></filter>
   </defs>
   <style>
     text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif; fill: #edece8; }
@@ -14,10 +15,17 @@
     .b { font-size: 16px; font-weight: 600; }
     .box { fill: #151517; stroke: #ffffff2e; }
     .line { stroke: #9b9994; stroke-width: 1.4; fill: none; }
+
+    @keyframes dash9 { to { stroke-dashoffset: -18; } }
+    @keyframes dash7 { to { stroke-dashoffset: -14; } }
+    .flow9 { animation: dash9 1.2s linear infinite; }
+    .flow7 { animation: dash7 1.2s linear infinite; }
+    @media (prefers-reduced-motion: reduce) { .motion { display: none; } .flow9, .flow7 { animation: none; } }
   </style>
 
   <rect width="960" height="600" fill="#0e0e10"/>
   <rect width="960" height="600" fill="url(#grid)"/>
+  <g class="motion"><rect x="480" y="300" width="180" height="64" rx="6" fill="#ffb547" filter="url(#halo)" opacity="0"><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;0.28;0.28;0;0;0.28;0.28;0;0" keyTimes="0;0.05;0.065;0.285;0.3;0.55;0.565;0.785;0.8;1"/></rect><rect x="480" y="140" width="180" height="120" rx="8" fill="#ff5a1f" filter="url(#halo)" opacity="0"><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;0.55;0.55;0;0" keyTimes="0;0.71;0.725;0.775;0.79;1"/></rect><rect x="480" y="140" width="180" height="120" rx="8" fill="#ff5a1f" filter="url(#halo)" opacity="0"><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;0.55;0.55;0;0" keyTimes="0;0.45;0.465;0.515;0.53;1"/></rect><rect x="480" y="140" width="180" height="120" rx="8" fill="#ff5a1f" filter="url(#halo)" opacity="0"><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;0.55;0.55;0;0" keyTimes="0;0.19;0.205;0.255;0.27;1"/></rect></g>
   <text x="32" y="40" class="mono" font-size="12" fill="#ff5a1f" letter-spacing="1.5">FIG.1</text>
   <text x="84" y="40" class="s">设计文章中的双层架构</text>
 
@@ -27,21 +35,21 @@
   <rect class="box" x="32" y="176" width="160" height="48" rx="6"/><text x="112" y="206" text-anchor="middle" class="b">飞书 / IM</text>
   <rect class="box" x="32" y="242" width="160" height="48" rx="6"/><text x="112" y="272" text-anchor="middle" class="b">其他 Trigger</text>
 
-  <path class="line" d="M192 134 C 222 134, 222 200, 250 200" marker-end="url(#a)"/>
-  <path class="line" d="M192 200 H 250" marker-end="url(#a)"/>
-  <path class="line" d="M192 266 C 222 266, 222 200, 250 200" marker-end="url(#a)"/>
+  <path class="line" id="s1" d="M192 134 C 222 134, 222 200, 250 200" marker-end="url(#a)"/>
+  <path class="line" id="s2" d="M192 200 H 250" marker-end="url(#a)"/>
+  <path class="line" id="s3" d="M192 266 C 222 266, 222 200, 250 200" marker-end="url(#a)"/>
 
   <!-- Filter -->
   <rect class="box" x="252" y="146" width="176" height="108" rx="6"/>
   <text x="340" y="176" text-anchor="middle" class="b">两级过滤</text>
   <text x="340" y="204" text-anchor="middle" class="s">① 确定性代码</text>
   <text x="340" y="228" text-anchor="middle" class="s">② LLM 判断</text>
-  <path class="line" d="M428 200 H 478" marker-end="url(#a)"/>
+  <path class="line" id="flt" d="M428 200 H 478" marker-end="url(#a)"/>
 
   <!-- Human -->
   <circle cx="570" cy="74" r="20" fill="none" stroke="#edece8" stroke-width="1.4"/>
   <text x="570" y="80" text-anchor="middle" font-size="15">人</text>
-  <path class="line" d="M570 96 V 136" marker-start="url(#a)" marker-end="url(#a)"/>
+  <path class="line" id="human" d="M570 96 V 136" marker-start="url(#a)" marker-end="url(#a)"/>
   <text x="586" y="122" class="xs">唯一的对话入口</text>
 
   <!-- Router -->
@@ -61,22 +69,22 @@
   <rect x="736" y="322" width="84" height="32" rx="5" fill="none" stroke="#ffffff2e" stroke-dasharray="4 3"/><text x="778" y="343" text-anchor="middle" class="s">Subagent</text>
   <rect x="828" y="322" width="84" height="32" rx="5" fill="none" stroke="#ffffff2e" stroke-dasharray="4 3"/><text x="870" y="343" text-anchor="middle" class="s">Subagent</text>
 
-  <path d="M660 186 C 690 186, 690 135, 716 135" stroke="#ff5a1f" stroke-width="1.6" fill="none" marker-end="url(#ao)"/>
-  <path d="M660 200 H 716" stroke="#ff5a1f" stroke-width="1.6" fill="none" marker-end="url(#ao)"/>
-  <path d="M660 214 C 690 214, 690 300, 716 300" stroke="#ff5a1f" stroke-width="1.6" fill="none" marker-end="url(#ao)"/>
+  <path id="w1" d="M660 186 C 690 186, 690 135, 716 135" stroke="#ff5a1f" stroke-width="1.6" fill="none" marker-end="url(#ao)"/>
+  <path id="w2" d="M660 200 H 716" stroke="#ff5a1f" stroke-width="1.6" fill="none" marker-end="url(#ao)"/>
+  <path id="w3" d="M660 214 C 690 214, 690 300, 716 300" stroke="#ff5a1f" stroke-width="1.6" fill="none" marker-end="url(#ao)"/>
   <text x="664" y="280" class="xs">分派</text>
-  <path class="line" d="M716 236 C 700 250, 680 256, 664 252" stroke-dasharray="4 3" marker-end="url(#a)"/>
+  <path class="flow7 line" id="report" d="M716 236 C 700 250, 680 256, 664 252" stroke-dasharray="4 3" marker-end="url(#a)"/>
 
   <!-- Watchdog -->
   <rect x="480" y="300" width="180" height="64" rx="6" fill="#151517" stroke="#ffb54766"/>
   <text x="570" y="326" text-anchor="middle" class="b" style="fill:#ffb547">Watchdog</text>
   <text x="570" y="348" text-anchor="middle" class="s">定时检查故障与真实进展</text>
-  <path d="M660 332 H 716" stroke="#ffb54766" stroke-width="1.4" stroke-dasharray="4 3" fill="none"/>
+  <path id="wd" d="M660 332 H 716" class="flow7" stroke="#ffb54766" stroke-width="1.4" stroke-dasharray="4 3" fill="none"/>
 
   <text x="570" y="390" class="xs" text-anchor="middle">Worker 不直接对人，向 Router 汇报</text>
 
   <!-- Thread subscription -->
-  <path d="M112 290 V 406 H 824 V 374" stroke="#9b9994" stroke-width="1.4" stroke-dasharray="5 4" fill="none" marker-end="url(#a)"/>
+  <path id="thread" d="M112 290 V 406 H 824 V 374" class="flow9" stroke="#9b9994" stroke-width="1.4" stroke-dasharray="5 4" fill="none" marker-end="url(#a)"/>
   <text x="300" y="426" class="s">Thread 订阅：PR、IM 话题的后续事件直接送达对应 Worker</text>
 
   <!-- Separation strip -->
@@ -89,4 +97,25 @@
   <text x="656" y="512" class="b">执行环境</text><text x="656" y="533" class="s">留在用户机器，经轻量守护进程连接</text>
 
   <text x="32" y="580" class="xs">依据《Super-agent 设计探索》整理。公开原型 dsh-superagent-prototype 的实现与此不完全相同。</text>
+  <g class="motion">
+    <circle r="3.6" fill="#ff5a1f" opacity="0" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.02;0.09;1"><mpath href="#s1"/></animateMotion><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.02;0.024;0.09;0.102;1"/></circle>
+    <rect x="252" y="146" width="176" height="108" rx="6" fill="none" stroke="#ff5a1f" stroke-width="1.6" opacity="0"><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.09;0.105;0.135;0.15;1"/></rect>
+    <circle r="3.6" fill="#ff5a1f" opacity="0" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.15;0.2;1"><mpath href="#flt"/></animateMotion><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.15;0.154;0.2;0.212;1"/></circle>
+    <circle r="3.6" fill="#ff5a1f" opacity="0" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.22;0.29;1"><mpath href="#w1"/></animateMotion><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.22;0.224;0.29;0.302;1"/></circle>
+    <rect x="720" y="104" width="208" height="62" rx="6" fill="none" stroke="#ff5a1f" stroke-width="1.6" opacity="0"><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.29;0.305;0.345;0.36;1"/></rect>
+    <circle r="3.6" fill="#ff5a1f" opacity="0" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.28;0.35;1"><mpath href="#s2"/></animateMotion><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.28;0.284;0.35;0.362;1"/></circle>
+    <rect x="252" y="146" width="176" height="108" rx="6" fill="none" stroke="#ff5a1f" stroke-width="1.6" opacity="0"><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.35;0.365;0.395;0.41;1"/></rect>
+    <circle r="3.6" fill="#ff5a1f" opacity="0" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.41;0.46;1"><mpath href="#flt"/></animateMotion><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.41;0.414;0.46;0.472;1"/></circle>
+    <circle r="3.6" fill="#ff5a1f" opacity="0" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.48;0.55;1"><mpath href="#w2"/></animateMotion><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.48;0.484;0.55;0.562;1"/></circle>
+    <rect x="720" y="182" width="208" height="62" rx="6" fill="none" stroke="#ff5a1f" stroke-width="1.6" opacity="0"><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.55;0.565;0.605;0.62;1"/></rect>
+    <circle r="3.6" fill="#ff5a1f" opacity="0" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.54;0.61;1"><mpath href="#s3"/></animateMotion><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.54;0.544;0.61;0.622;1"/></circle>
+    <rect x="252" y="146" width="176" height="108" rx="6" fill="none" stroke="#ff5a1f" stroke-width="1.6" opacity="0"><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.61;0.625;0.655;0.67;1"/></rect>
+    <circle r="3.6" fill="#ff5a1f" opacity="0" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.67;0.72;1"><mpath href="#flt"/></animateMotion><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.67;0.674;0.72;0.732;1"/></circle>
+    <circle r="3.6" fill="#ff5a1f" opacity="0" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.74;0.81;1"><mpath href="#w3"/></animateMotion><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.74;0.744;0.81;0.822;1"/></circle>
+    <rect x="720" y="260" width="208" height="110" rx="6" fill="none" stroke="#ff5a1f" stroke-width="1.6" opacity="0"><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.81;0.825;0.865;0.88;1"/></rect>
+    <circle r="3" fill="#edece8" opacity="0" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.1;0.46;1"><mpath href="#thread"/></animateMotion><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.1;0.104;0.46;0.472;1"/></circle>
+    <rect x="720" y="260" width="208" height="110" rx="6" fill="none" stroke="#edece8" stroke-width="1.2" opacity="0"><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.46;0.475;0.505;0.52;1"/></rect>
+    <circle r="3" fill="#edece8" opacity="0" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.82;0.87;1"><mpath href="#report"/></animateMotion><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.82;0.824;0.87;0.882;1"/></circle>
+    <circle r="3" fill="#edece8" opacity="0" filter="url(#glow)"><animateMotion dur="6s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.9;0.96;1"><mpath href="#human"/></animateMotion><animate attributeName="opacity" dur="6s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.9;0.904;0.96;0.972;1"/></circle>
+  </g>
 </svg>

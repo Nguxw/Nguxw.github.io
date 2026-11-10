@@ -65,7 +65,7 @@
 <p>因此，DeepSeek Harness 团队发布 Super-agent 设计文章后，我做了比较仔细的阅读。它试图回答的正是这个问题：当 Agent 需要持续承担工作时，系统能否替人分担更多的协调、记忆与验收负担。</p>
 <p>在展开之前，先说明本文采用的衡量标准：一个 Super-agent 是否有价值，取决于在质量与权限边界都得到保障的前提下，它能否让人以更少的介入，获得更多可以直接接受的成果。后文的讨论都围绕这一标准展开。</p>
 <h2 id="设计文章-研究原型与底座">设计文章、研究原型与底座</h2>
-<p>这篇文章题为《Super-agent 设计探索：迈向更自主的 Agent 系统》，我阅读的是<a href="https://wallstreetcn.com/articles/3784931">华尔街见闻 11 月 1 日的转载版本</a>。作者在开篇即说明，文章并非对 DeepSeek Harness 现有产品功能的介绍。</p>
+<p>这篇文章是 DeepSeek Harness 团队于 10 月 31 日发布的<a href="https://wallstreetcn.com/articles/3784931">《Super-agent 设计探索：迈向更自主的 Agent 系统》</a>。作者在开篇即说明，文章并非对 DeepSeek Harness 现有产品功能的介绍。</p>
 <p>文章的核心设计包括以下几个方面：</p>
 <ul>
 <li><strong>协调层与执行层分离。</strong> Router 常驻运行，负责承接所有面向人的交互并分派任务，本身不执行具体工作，文中甚至提到它可以不配备 Bash 工具。Worker 拥有相互隔离的上下文和完整的执行工具，不直接与人对话，只向 Router 汇报进展；Worker 内部还可以继续创建 Subagent。</li>
@@ -223,7 +223,7 @@
 <hr>
 <h3 id="参考资料">参考资料</h3>
 <ol>
-<li>DeepSeek Harness 团队，《Super-agent 设计探索：迈向更自主的 Agent 系统》，<a href="https://wallstreetcn.com/articles/3784931">华尔街见闻转载</a>，2026-11-01</li>
+<li>DeepSeek Harness 团队，《Super-agent 设计探索：迈向更自主的 Agent 系统》，DeepSeek Harness 官方公众号，2026-10-31（<a href="https://wallstreetcn.com/articles/3784931">全文</a>）</li>
 <li><a href="https://github.com/deepseek-ai/dsh-superagent-prototype">deepseek-ai/dsh-superagent-prototype</a>（研究原型，MIT）</li>
 <li>原型文档：<a href="https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/000-philosophy.md">000-philosophy</a>、<a href="https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/002-authorization.md">002-authorization</a>、<a href="https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/007-architecture.md">007-architecture</a></li>
 <li>Elvis（@omarsar0），<a href="https://x.com/omarsar0/status/2116942815150157871">X 上的讨论</a>，2026-11-01</li>
