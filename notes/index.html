@@ -47,7 +47,7 @@
     <section class="wrap notes-hero" aria-labelledby="notes-title">
       <p class="hero-status">
         <span class="pulse" aria-hidden="true"></span>
-        <span>1 <span data-en="notes · updated as I go">篇 · 持续更新</span></span>
+        <span>2 <span data-en="notes · updated as I go">篇 · 持续更新</span></span>
       </p>
       <h1 id="notes-title" lang="en">Field <em>notes</em><span class="dot">.</span></h1>
       <p class="notes-hero-lead" data-en="What I’ve been seeing and thinking about in tech: designs and papers I’ve read, lessons from projects I’ve built, and open questions worth writing down.">记录我在技术上的观察与思考：读过的设计和论文，做项目时的经验，以及一些还没想清楚、但值得写下来的问题。</p>
@@ -59,14 +59,27 @@
         <button class="chip" type="button" data-tag="Agent" aria-pressed="false">Agent</button>
         <button class="chip" type="button" data-tag="Architecture" aria-pressed="false">Architecture</button>
         <button class="chip" type="button" data-tag="Harness" aria-pressed="false">Harness</button>
+        <button class="chip" type="button" data-tag="Memory" aria-pressed="false">Memory</button>
+        <button class="chip" type="button" data-tag="Product" aria-pressed="false">Product</button>
       </div>
       <ol class="note-list" id="notes-all" role="list">
+        <li class="note-row" data-tags="Agent|Memory|Product">
+          <a class="note-link" href="personal-agent.html">
+            <time class="date" datetime="2026-11-13">2026.11.13</time>
+            <div class="note-main">
+              <h2 class="note-title" data-en="Personal agents: from finishing tasks to carrying ongoing responsibilities">Personal Agent：从完成任务到承担事务</h2>
+              <p class="note-summary" data-en="Personal agents have shipped in quick succession over the past two months. Starting from a product-positioning analysis, this note looks at what memory, proactivity, long-running execution, and authorization require, and how to judge the real value.">近两个月 Personal Agent 产品密集发布。本文从一篇产品定位分析出发，讨论个人代理在记忆、主动服务、长期执行与授权上需要解决的问题，以及如何评估它的真实价值。</p>
+            </div>
+            <div class="note-side"><ul class="note-tags" role="list"><li>Agent</li><li>Memory</li><li>Product</li></ul></div>
+            <svg class="icon note-arrow" aria-hidden="true"><use href="#icon-right"/></svg>
+          </a>
+        </li>
         <li class="note-row" data-tags="Agent|Harness|Architecture">
           <a class="note-link" href="deepseek-super-agent.html">
-            <time class="date" datetime="2026-11-06">2026.11.06</time>
+            <time class="date" datetime="2026-11-10">2026.11.10</time>
             <div class="note-main">
               <h2 class="note-title" data-en="What DeepSeek’s Super-agent says about where agents go next">从 DeepSeek Super-agent 看 Agent 的下一步</h2>
-              <p class="note-summary" data-en="DeepSeek recently published its Super-agent design and a research prototype. Drawing on my work on long-running tasks and agent platforms, this note examines what the design offers, what remains unresolved, and where the community disagrees.">DeepSeek 近期公开了 Super-agent 的设计文章与研究原型。本文结合我在长任务与 Agent 平台方面的实践，分析这套设计的价值、尚待解决的问题，以及社区讨论中的主要分歧。</p>
+              <p class="note-summary" data-en="DeepSeek recently published its Super-agent design and a research prototype. This note examines what the design offers, what remains unresolved, and where the community disagrees.">DeepSeek 近期公开了 Super-agent 的设计文章与研究原型。本文分析这套设计的价值、尚待解决的问题，以及社区讨论中的主要分歧。</p>
             </div>
             <div class="note-side"><ul class="note-tags" role="list"><li>Agent</li><li>Harness</li><li>Architecture</li></ul></div>
             <svg class="icon note-arrow" aria-hidden="true"><use href="#icon-right"/></svg>

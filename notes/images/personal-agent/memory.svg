@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="t d">
+  <title id="t">Personal Agent 的记忆分层示意</title>
+  <desc id="d">原始证据派生出用户理解、工作知识和任务账本；外部结果证据写入任务账本；用户的纠正会沿派生关系传递到注入上下文。</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#ffffff0d"/></pattern>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#9b9994"/></marker>
+    <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#ff5a1f"/></marker>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="halo" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+  <style>
+    text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif; fill: #edece8; }
+    .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    .s { font-size: 13px; fill: #9b9994; }
+    .xs { font-size: 12px; fill: #6b6a66; }
+    .b { font-size: 16px; font-weight: 600; }
+    .box { fill: #151517; stroke: #ffffff2e; }
+    .line { stroke: #9b9994; stroke-width: 1.4; fill: none; }
+    @keyframes dash9 { to { stroke-dashoffset: -18; } }
+    .flow9 { animation: dash9 1.2s linear infinite; }
+    .rm-only { display: none; }
+    @media (prefers-reduced-motion: reduce) { .motion { display: none; } .flow9 { animation: none; } .rm-only { display: inline; } }
+  </style>
+  <rect width="960" height="560" fill="#0e0e10"/>
+  <rect width="960" height="560" fill="url(#grid)"/>
+  <g class="motion"><rect x="712" y="110" width="216" height="110" rx="8" fill="#ff5a1f" filter="url(#halo)" opacity="0"><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;0.3;0.3;0;0" keyTimes="0;0.22;0.235;0.345;0.36;1"/></rect></g>
+  <text x="32" y="40" class="mono" font-size="12" fill="#ff5a1f" letter-spacing="1.5">FIG.1</text>
+  <text x="84" y="40" class="s">长期记忆需要分清依据、用途和更新方式</text>
+
+  <text x="32" y="96" class="xs mono" letter-spacing="1">依据</text>
+  <rect class="box" x="32" y="110" width="220" height="320" rx="6"/>
+  <text x="48" y="138" class="b">原始证据</text>
+  <rect x="44" y="152" width="196" height="34" rx="5" fill="#0e0e10" stroke="#ffffff1f"/><text x="58" y="174" class="s">用户消息</text>
+  <rect x="44" y="196" width="196" height="34" rx="5" fill="#0e0e10" stroke="#ffffff1f"/><text x="58" y="218" class="s">文档与网页</text>
+  <rect x="44" y="240" width="196" height="34" rx="5" fill="#0e0e10" stroke="#ffffff1f"/><text x="58" y="262" class="s">工具结果</text>
+  <rect x="44" y="284" width="196" height="34" rx="5" fill="#0e0e10" stroke="#ff5a1f88"/><text x="58" y="306" class="s" style="fill:#ff5a1f">明确的纠正</text>
+  <text x="48" y="360" class="xs">保留原貌，</text>
+  <text x="48" y="380" class="xs">供派生信息回溯核对</text>
+
+  <text x="332" y="96" class="xs mono" letter-spacing="1">派生与状态</text>
+  <rect class="box" x="332" y="110" width="300" height="110" rx="6"/>
+  <text x="348" y="136" class="b">用户理解</text>
+  <text x="348" y="166" class="s">✕ 用户喜欢长邮件</text>
+  <g class="rm-only"><line x1="364" y1="161" x2="456" y2="161" stroke="#ffb547" stroke-width="1.6"/><text x="474" y="166" class="xs" style="fill:#ffb547">已被纠正</text></g>
+  <text x="348" y="196" font-size="13"><tspan style="fill:#8fe3b8">✓</tspan> 这一封需要详细 · 仅限本次</text>
+  <rect class="box" x="332" y="236" width="300" height="86" rx="6"/>
+  <text x="348" y="262" class="b">工作知识</text>
+  <text x="348" y="292" class="s">项目约束、验证过的方法、常见问题</text>
+  <rect class="box" x="332" y="338" width="300" height="92" rx="6"/>
+  <text x="348" y="364" class="b">任务账本</text>
+  <text x="348" y="392" font-size="14">退款申请</text>
+  <rect x="418" y="376" width="84" height="24" rx="12" fill="#ffb54726"/><text x="460" y="393" text-anchor="middle" font-size="12" font-weight="600" style="fill:#ffb547">等待回复</text>
+  <text x="348" y="418" class="xs">目标 · 进度 · 等待事项 · 取消状态</text>
+
+  <text x="712" y="96" class="xs mono" letter-spacing="1">使用</text>
+  <rect x="712" y="110" width="216" height="110" rx="6" fill="#151517" stroke="#ff5a1f"/>
+  <text x="728" y="136" class="b">注入上下文</text>
+  <text x="728" y="166" class="s">每次会话预先加载</text>
+  <text x="728" y="192" class="s">只放稳定、高置信的内容</text>
+  <rect class="box" x="712" y="338" width="216" height="92" rx="6"/>
+  <text x="728" y="364" class="b">外部结果证据</text>
+  <text x="728" y="394" class="s">订单号、回执、到账记录</text>
+  <text x="728" y="418" class="xs">证明事情确实发生了</text>
+
+  <path id="evA" class="line" d="M252 200 C 292 200, 292 165, 328 165" marker-end="url(#a)"/>
+  <path id="evB" class="line" d="M252 279 H 328" marker-end="url(#a)"/>
+  <path id="evC" class="line" d="M252 350 C 292 350, 292 384, 328 384" marker-end="url(#a)"/>
+  <path id="corr" d="M240 301 C 296 301, 296 196, 328 196" stroke="#ff5a1f" stroke-width="1.4" stroke-dasharray="4 3" fill="none" marker-end="url(#ao)"/>
+  <path id="toD1" class="line" d="M632 165 H 708" marker-end="url(#a)"/>
+  <path id="toD2" class="line" d="M632 279 C 672 279, 672 196, 708 196" marker-end="url(#a)"/>
+  <path id="ext" class="line" d="M712 384 H 636" marker-end="url(#a)"/>
+
+  <rect class="box" x="32" y="462" width="896" height="50" rx="6"/>
+  <text x="48" y="492" class="s"><tspan font-weight="600" style="fill:#edece8">会影响决策的记忆，至少保留：</tspan>来源 · 记录时间 · 适用范围 · 有效条件 · 明确表达还是推断 · 纠正记录</text>
+  <text x="32" y="542" class="xs">示意图。分层参考 Anthropic《The components of agent memory》等资料整理。</text>
+  <g class="motion">
+    <circle r="3" fill="#edece8" opacity="0" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.03;0.1;1"><mpath href="#evA"/></animateMotion><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.03;0.034;0.1;0.112;1"/></circle>
+    <rect x="332" y="110" width="300" height="110" rx="6" fill="none" stroke="#edece8" stroke-width="1.2" opacity="0"><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.1;0.115;0.155;0.17;1"/></rect>
+    <circle r="3" fill="#edece8" opacity="0" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.12;0.19;1"><mpath href="#evB"/></animateMotion><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.12;0.124;0.19;0.202;1"/></circle>
+    <rect x="332" y="236" width="300" height="86" rx="6" fill="none" stroke="#edece8" stroke-width="1.2" opacity="0"><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.19;0.205;0.245;0.26;1"/></rect>
+    <circle r="3" fill="#edece8" opacity="0" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.21;0.28;1"><mpath href="#evC"/></animateMotion><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.21;0.214;0.28;0.292;1"/></circle>
+    <rect x="332" y="338" width="300" height="92" rx="6" fill="none" stroke="#edece8" stroke-width="1.2" opacity="0"><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.28;0.295;0.335;0.35;1"/></rect>
+    <circle r="3" fill="#edece8" opacity="0" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.16;0.22;1"><mpath href="#toD1"/></animateMotion><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.16;0.164;0.22;0.232;1"/></circle>
+    <circle r="3" fill="#edece8" opacity="0" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.25;0.31;1"><mpath href="#toD2"/></animateMotion><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.25;0.254;0.31;0.322;1"/></circle>
+    <circle r="3.2" fill="#8fe3b8" opacity="0" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.4;0.46;1"><mpath href="#ext"/></animateMotion><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.4;0.404;0.46;0.472;1"/></circle>
+    <rect x="418" y="376" width="84" height="24" rx="12" fill="none" stroke="#8fe3b8" stroke-width="1.6" opacity="0"><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.46;0.475;0.545;0.56;1"/></rect>
+    <circle r="3.6" fill="#ff5a1f" opacity="0" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.58;0.66;1"><mpath href="#corr"/></animateMotion><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.58;0.584;0.66;0.672;1"/></circle>
+    <line x1="364" y1="161" x2="456" y2="161" stroke="#ffb547" stroke-width="1.6" opacity="0"><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.66;0.675;0.97;1"/></line>
+    <text x="474" y="166" class="xs" style="fill:#ffb547" opacity="0">已被纠正<animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0" keyTimes="0;0.66;0.675;0.97;1"/></text>
+    <rect x="332" y="110" width="300" height="110" rx="6" fill="none" stroke="#ffb547" stroke-width="1.6" opacity="0"><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.66;0.675;0.745;0.76;1"/></rect>
+    <circle r="3.6" fill="#ff5a1f" opacity="0" filter="url(#glow)"><animateMotion dur="7s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.76;0.82;1"><mpath href="#toD1"/></animateMotion><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.76;0.764;0.82;0.832;1"/></circle>
+    <rect x="712" y="110" width="216" height="110" rx="6" fill="none" stroke="#ff5a1f" stroke-width="1.6" opacity="0"><animate attributeName="opacity" dur="7s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.82;0.835;0.925;0.94;1"/></rect>
+  </g>
+</svg>

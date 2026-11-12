@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="t d">
+  <title id="t">长期任务的状态与恢复示意</title>
+  <desc id="d">任务从待执行到执行中，在外部动作前复查授权、取消与预算；外部请求超时后进入结果未知，通过幂等标识与结果查询确认后才算完成，无法确认且后果严重时交还用户。</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#ffffff0d"/></pattern>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#9b9994"/></marker>
+    <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#ff5a1f"/></marker>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="halo" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+  <style>
+    text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif; fill: #edece8; }
+    .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    .s { font-size: 13px; fill: #9b9994; }
+    .xs { font-size: 12px; fill: #6b6a66; }
+    .b { font-size: 16px; font-weight: 600; }
+    .box { fill: #151517; stroke: #ffffff2e; }
+    .line { stroke: #9b9994; stroke-width: 1.4; fill: none; }
+    @keyframes dash9 { to { stroke-dashoffset: -18; } }
+    .flow9 { animation: dash9 1.2s linear infinite; }
+    .rm-only { display: none; }
+    @media (prefers-reduced-motion: reduce) { .motion { display: none; } .flow9 { animation: none; } .rm-only { display: inline; } }
+  </style>
+  <rect width="960" height="540" fill="#0e0e10"/>
+  <rect width="960" height="540" fill="url(#grid)"/>
+  <g class="motion"><rect x="596" y="290" width="164" height="64" rx="6" fill="#ffb547" filter="url(#halo)" opacity="0"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;0.4;0.4;0;0" keyTimes="0;0.56;0.575;0.645;0.66;1"/></rect><rect x="804" y="120" width="124" height="64" rx="6" fill="#8fe3b8" filter="url(#halo)" opacity="0"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;0.45;0.45;0;0" keyTimes="0;0.82;0.835;0.945;0.96;1"/></rect></g>
+  <text x="32" y="40" class="mono" font-size="12" fill="#ff5a1f" letter-spacing="1.5">FIG.3</text>
+  <text x="84" y="40" class="s">任务的生命周期独立于聊天会话</text>
+  <text x="32" y="104" class="xs mono" letter-spacing="1">主路径</text>
+  <text x="32" y="326" class="xs mono" letter-spacing="1">等待与异常</text>
+  <rect class="box" x="32" y="120" width="120" height="64" rx="6"/>
+  <text x="48" y="148" class="b">待执行</text>
+  <rect class="box" x="196" y="120" width="148" height="64" rx="6"/>
+  <text x="212" y="148" class="b">执行中</text>
+  <text x="212" y="170" class="s">推进与记录进度</text>
+  <rect class="box" x="388" y="120" width="164" height="64" rx="6"/>
+  <text x="404" y="148" class="b">动作前复查</text>
+  <text x="404" y="170" class="s">授权 · 取消 · 预算</text>
+  <rect class="box" x="596" y="120" width="164" height="64" rx="6"/>
+  <text x="612" y="148" class="b">等待外部结果</text>
+  <text x="612" y="170" class="s">外部系统处理中</text>
+  <rect class="box" x="804" y="120" width="124" height="64" rx="6" style="stroke:#8fe3b8"/>
+  <text x="820" y="148" class="b">完成</text>
+  <text x="820" y="170" class="s">有业务证据</text>
+  <rect class="box" x="196" y="290" width="148" height="64" rx="6"/>
+  <text x="212" y="318" class="b">等待用户</text>
+  <text x="212" y="340" class="s">需要决定或补充</text>
+  <rect class="box" x="388" y="290" width="164" height="64" rx="6"/>
+  <text x="404" y="318" class="b">交还用户</text>
+  <text x="404" y="340" class="s">无法确认且后果严重</text>
+  <rect class="box" x="596" y="290" width="164" height="64" rx="6" style="stroke:#ffb54799"/>
+  <text x="612" y="318" class="b">结果未知</text>
+  <text x="612" y="340" class="s">超时，响应丢失</text>
+  <rect class="box" x="804" y="290" width="124" height="64" rx="6"/>
+  <text x="820" y="318" class="b">查询结果</text>
+  <text x="820" y="340" class="s">幂等标识 · 回查</text>
+
+  <path id="a1" class="line" d="M152 152 H 192" marker-end="url(#a)"/>
+  <path id="a2" class="line" d="M344 152 H 384" marker-end="url(#a)"/>
+  <path id="a3" class="line" d="M552 152 H 592" marker-end="url(#a)"/>
+  <path id="a4" class="line" d="M760 152 H 800" marker-end="url(#a)"/>
+  <path id="a5" class="line" d="M678 184 V 286" marker-end="url(#a)"/>
+  <text x="688" y="240" class="xs">超时</text>
+  <path id="a6" class="line" d="M760 322 H 800" marker-end="url(#a)"/>
+  <path id="a7" class="line" d="M866 290 V 188" marker-end="url(#a)"/>
+  <text x="876" y="240" class="xs">已确认</text>
+  <path id="a8" class="line" d="M596 322 H 556" marker-end="url(#a)"/>
+  <path id="a9" class="line" d="M270 188 V 286" marker-start="url(#a)" marker-end="url(#a)"/>
+
+  <text x="32" y="402" class="xs mono" letter-spacing="1">取消信号</text>
+  <path class="flow9" d="M92 430 H 866" stroke="#ff6b6b" stroke-width="1.4" stroke-dasharray="5 4" fill="none"/>
+  <path d="M270 430 V 358 M470 430 V 358 M678 430 V 358" stroke="#ff6b6b88" stroke-width="1.2" stroke-dasharray="3 3" fill="none"/>
+  <text x="32" y="462" class="s">取消要传递到队列和运行中的子任务；昨天获准的动作，执行前仍要再复查一次。</text>
+  <text x="32" y="490" class="s">完成需要业务证据：提交退款申请、收到客服回复、款项到账，是三个不同的状态。</text>
+  <text x="32" y="524" class="xs">参考架构示意，不对应任何产品的内部实现。</text>
+  <g class="motion">
+    <rect x="32" y="120" width="120" height="64" rx="6" fill="none" stroke="#edece8" stroke-width="1.2" opacity="0"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.02;0.035;0.085;0.1;1"/></rect>
+    <circle r="3" fill="#edece8" opacity="0" filter="url(#glow)"><animateMotion dur="8s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.1;0.14;1"><mpath href="#a1"/></animateMotion><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.1;0.104;0.14;0.152;1"/></circle>
+    <rect x="196" y="120" width="148" height="64" rx="6" fill="none" stroke="#edece8" stroke-width="1.2" opacity="0"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.14;0.155;0.225;0.24;1"/></rect>
+    <circle r="3" fill="#edece8" opacity="0" filter="url(#glow)"><animateMotion dur="8s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.24;0.28;1"><mpath href="#a2"/></animateMotion><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.24;0.244;0.28;0.292;1"/></circle>
+    <rect x="388" y="120" width="164" height="64" rx="6" fill="none" stroke="#8fe3b8" stroke-width="1.6" opacity="0"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.28;0.295;0.345;0.36;1"/></rect>
+    <circle r="3" fill="#edece8" opacity="0" filter="url(#glow)"><animateMotion dur="8s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.36;0.4;1"><mpath href="#a3"/></animateMotion><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.36;0.364;0.4;0.412;1"/></circle>
+    <rect x="596" y="120" width="164" height="64" rx="6" fill="none" stroke="#edece8" stroke-width="1.2" opacity="0"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.4;0.415;0.485;0.5;1"/></rect>
+    <circle r="3.2" fill="#ffb547" opacity="0" filter="url(#glow)"><animateMotion dur="8s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.5;0.56;1"><mpath href="#a5"/></animateMotion><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.5;0.504;0.56;0.572;1"/></circle>
+    <circle r="3" fill="#edece8" opacity="0" filter="url(#glow)"><animateMotion dur="8s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.66;0.7;1"><mpath href="#a6"/></animateMotion><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.66;0.664;0.7;0.712;1"/></circle>
+    <rect x="804" y="290" width="124" height="64" rx="6" fill="none" stroke="#edece8" stroke-width="1.2" opacity="0"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.7;0.715;0.765;0.78;1"/></rect>
+    <circle r="3.2" fill="#8fe3b8" opacity="0" filter="url(#glow)"><animateMotion dur="8s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.78;0.82;1"><mpath href="#a7"/></animateMotion><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.78;0.784;0.82;0.832;1"/></circle>
+  </g>
+</svg>
