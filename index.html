@@ -151,7 +151,7 @@
         <div class="ticker-group">
           <span class="ticker-label">@Taotian</span><span>Java</span><span>Spring Boot</span><span>MyBatis</span><span>HSF / RPC</span><span>MySQL</span>
           <span class="ticker-label">@Tencent IEG</span><span>TypeScript</span><span>Bun</span><span>Node.js</span><span>Playwright</span><span>Redis</span><span>Docker</span>
-          <span class="ticker-label">@Projects</span><span>Python</span><span>FastAPI</span><span>LangGraph</span><span>Qdrant</span><span>PostgreSQL</span><span>SQLite FTS5</span><span>React</span><span>Vue</span>
+          <span class="ticker-label">@Projects</span><span>Tauri</span><span>Python</span><span>FastAPI</span><span>LangGraph</span><span>Qdrant</span><span>PostgreSQL</span><span>SQLite FTS5</span><span>React</span><span>Vue</span>
         </div>
       </div>
     </div>
@@ -175,11 +175,12 @@
             <p class="place" data-en="Hangzhou">杭州</p>
           </div>
           <div class="experience-body">
-            <p class="experience-lead" data-en="Developed backend features for Taobao’s main search and helped connect AI-assisted development to the team’s delivery workflow.">参与淘宝主搜服务端开发，将 AI 辅助研发接入需求交付流程。</p>
+            <p class="experience-lead" data-en="Developed backend features for Taobao’s main search and brought a development Agent into real search requirements. Business knowledge, source code, and live configuration feed the workflow, taking each requirement from ticket to a change ready for staging tests.">负责淘宝主搜服务端业务开发，推进研发 Agent 在真实搜索需求中落地。将业务知识、源码和线上配置接入研发流程，支持从需求工单到预发待测的交付。</p>
             <ul class="contributions" role="list">
-              <li><strong data-en="Search backend">搜索服务端</strong><span data-en="Implemented search strategies and channel integration in Java. Made channel rules and display strategies configurable for reuse, experiment switching, and fallback.">用 Java 实现搜索策略与多渠道接入，将渠道规则和展示策略配置化，支持复用、实验切换与兼容回退。</span></li>
-              <li><strong data-en="Staging delivery">预发交付</strong><span data-en="Owned staging automation for approved changes, connecting code review, deployment authorization, and version verification. Added recovery that reuses existing artifacts after interruptions.">负责自动化预发交付，衔接代码评审、部署授权与版本核验，支持中断后复用已有产物并继续推进。</span></li>
-              <li><strong data-en="Evaluation benchmark">研发评测</strong><span data-en="Built a benchmark from historical requirements, code changes, and acceptance criteria to evaluate clarification and technical proposals.">用历史需求、代码变更和验收条件搭建基准，评测需求澄清与技术方案的质量。</span></li>
+              <li><strong data-en="Development Agent workflow">研发 Agent 工作流</strong><span data-en="Designed the main-search development Agent workflow. The Agent works out requirements and implementation paths from business context, and a state machine manages task progress and stage acceptance. When the evidence at hand cannot settle a question that would change business behavior, the Agent compiles its reasoning for the owner and makes the change only under the approved plan.">设计并推进主搜研发 Agent 工作流。Agent 结合业务上下文判断需求和实现路径，状态机管理任务推进与阶段验收；对现有证据无法判定、且会改变业务行为的问题，由 Agent 整理依据交负责人确认，按获批方案执行变更。</span></li>
+              <li><strong data-en="Search domain rules">业务经验规则化</strong><span data-en="Worked on search strategy, channel integration, and result display, making channel rules and display strategies configurable for experiment switching and rollback. Turned this experience into planning rules for the Agent: trace each switch through the source to check its scope, precedence, and traffic conditions before deciding whether to reuse existing configuration or change code.">负责搜索策略、渠道接入和结果展示相关需求，将渠道规则与展示策略配置化，支持实验切换与回退。基于这些开发经验为 Agent 制定方案规则，要求它沿源码核对开关的生效范围、优先级和流量条件，再决定复用现有配置还是修改代码。</span></li>
+              <li><strong data-en="Handoff &amp; recovery">交接、恢复与验收</strong><span data-en="Linked plans, evidence, and code changes to each task. After a requirement is revised, work continues from the reconfirmed plan; after an interruption, accepted stage outputs are reused. After deployment, a check confirms the released version contains the approved commits.">将方案、取证材料和代码变更关联到当次任务。需求修订后按重新确认的方案推进，中断后复用已验收的阶段产物；部署后核对本次发布的实际版本是否包含获批提交。</span></li>
+              <li><strong data-en="Plan regression eval">方案回归评测</strong><span data-en="Built a regression set from historical requirements, pairing original tickets with the actual code changes and business acceptance criteria to check whether the Agent missed key constraints or chose the wrong implementation path. Problems found in trial runs become new cases for validating later changes to evidence gathering and planning rules.">用历史需求建立方案回归评测，将原始工单、实际代码变更和业务验收条件配对，检查 Agent 是否漏掉关键约束或选错实现路径。试跑中发现的问题补为回归用例，用于验证后续取证和方案规则的改动。</span></li>
             </ul>
             <ul class="tech-list" role="list" aria-label="技术栈" data-en-label="Technologies"><li>Java</li><li>Spring Boot</li><li>MyBatis</li><li>HSF / RPC</li><li>MySQL</li></ul>
           </div>
@@ -197,11 +198,12 @@
             <p class="place" data-en="Shenzhen">深圳</p>
           </div>
           <div class="experience-body">
-            <p class="experience-lead" data-en="Worked on a multi-user cloud Agent platform built with TypeScript, including long-running tasks, browser automation, and web and slide generation.">参与基于 TypeScript 的云端多用户 Agent 平台建设，涉及跨轮长任务、浏览器自动化、网页和演示文稿生成。</p>
+            <p class="experience-lead" data-en="Worked on a multi-user cloud Agent platform built with TypeScript. The platform provides shared session execution, tool integration, and sandboxes, and supports long-running tasks across turns, browser automation, and web page and slide generation.">参与基于 TypeScript 的云端多用户 Agent 平台建设。平台提供统一的会话执行、工具接入与沙箱能力，支持跨轮长任务、浏览器自动化，以及网页和 PPT 生成。</p>
             <ul class="contributions" role="list">
-              <li><strong data-en="Long-running tasks">Goal 长任务</strong><span data-en="Designed and implemented persistent tasks that continue across turns. Used a session state machine, an evaluator, CAS, and distributed locks for concurrent execution and recovery after restarts.">设计并实现跨轮自动续跑。结合会话状态机、独立 Evaluator、CAS 幂等控制和分布式锁，处理并发推进与重启恢复。</span></li>
-              <li><strong data-en="Browser handoff">浏览器接管</strong><span data-en="Helped integrate sandboxed browsers with remote preview and user takeover at login or confirmation steps. Improved session reuse and login-state recovery.">参与浏览器沙箱与远程接管，支持用户在登录或确认时接手操作，并完善会话复用和登录态恢复。</span></li>
-              <li><strong data-en="Content generation">内容生成</strong><span data-en="Owned the slide generation and editing module, connecting structured drafts to previews and PPT exports. Iterated on web page generation and its integration with the Agent runtime.">负责 AI PPT 生成与编辑模块，用结构化文稿衔接预览编辑和导出，并迭代 AI 网页生成与运行时集成。</span></li>
+              <li><strong data-en="Goal mode for long tasks">Goal 长任务模式</strong><span data-en="Designed and shipped Goal mode, which extends single-turn Agent runs into persistent tasks that continue across turns. Built on the session state machine and an end-of-turn hook, a separate Evaluator decides whether the task is done, while CAS-based idempotency, distributed locks, and scheduled sweeps handle concurrent progress across instances and recovery after restarts.">负责 Goal 长任务执行模式的设计与落地，将单轮 Agent 执行扩展为可跨轮自动续跑的持久化任务。基于会话状态机和轮次结束钩子，引入独立 Evaluator 判断任务是否完成，并结合 CAS 幂等控制、分布式锁与定时巡检，处理多实例并发推进和进程重启后的任务恢复。</span></li>
+              <li><strong data-en="Browser sandbox &amp; handoff">浏览器沙箱与人工接管</strong><span data-en="Helped connect browser actions to the Agent’s tool system, with remote preview and user takeover at steps such as login and confirmation. Improved session reuse and login-state recovery so the Agent can carry on with later web tasks in an isolated environment.">参与浏览器沙箱与人工接管能力建设，将浏览器操作接入 Agent 工具体系，支持用户远程预览并在登录、确认等环节接管。完善会话复用与登录态恢复，使 Agent 能在隔离环境中接续执行后续网页任务。</span></li>
+              <li><strong data-en="AI slide generation">AI PPT 生成与编辑</strong><span data-en="Owned the slide generation and editing module. A structured draft serves as the intermediate format linking AI generation, in-page preview and editing, and PPT export. Added template reuse and worked on template-based generation and export quality, so generated decks stay editable and ready to deliver.">负责 AI PPT 生成与编辑模块开发，以结构化文稿为中间表示，衔接 AI 生成、页面预览编辑与 PPT 导出。支持模板复用，并参与模板化生成与导出质量优化，使生成内容可继续编辑和交付。</span></li>
+              <li><strong data-en="Platform core &amp; web generation">平台核心链路与网页生成</strong><span data-en="Worked on the platform’s core path, including the runtime, streaming execution, tool calls, and multi-model support. Owned iterations of AI web page generation and its integration with the runtime, tools, and frontend, handling errors and stability issues during generation.">参与 Runtime、流式执行、工具调用及多模型适配开发，负责 AI 网页生成能力迭代。完成网页生成与平台运行时、工具及前端交互的集成，处理生成过程中的异常与稳定性问题。</span></li>
             </ul>
             <ul class="tech-list" role="list" aria-label="技术栈" data-en-label="Technologies"><li>TypeScript</li><li>Bun</li><li>Node.js</li><li>Playwright</li><li>Redis</li><li>Docker</li></ul>
           </div>
@@ -213,12 +215,39 @@
       <header class="section-head reveal">
         <span class="section-index" aria-hidden="true">02</span>
         <h2 id="projects-title" data-en="Selected projects">精选项目</h2>
-        <p data-en="Local Agent tooling, e-commerce support, and codebase exploration">本地 Agent 工具、电商售后与代码库理解</p>
+        <p data-en="Long-running agent runtime, local Agent tooling, e-commerce support, and codebase exploration">长时 Agent 运行时、本地 Agent 工具、电商售后与代码库理解</p>
       </header>
       <div class="project-grid">
+        <article class="project project-wide reveal" data-spotlight>
+          <figure class="project-visual">
+            <figcaption><span class="project-no" aria-hidden="true">P/01</span><span data-en="Crash recovery">断点恢复示意</span></figcaption>
+            <ol class="flow flow-resume" role="list">
+              <li><span data-en="Start">发起任务</span><strong>Web / App / CLI</strong></li>
+              <li><span data-en="Append each step">逐步落盘</span><strong>Event Log</strong></li>
+              <li><span data-en="Sandboxed run">沙箱执行</span><strong>Seatbelt</strong></li>
+            </ol>
+            <p class="flow-note">
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4.5h4.5"/></svg>
+              <span data-en="After a crash, resume from the log; external actions are not replayed">崩溃后从日志续跑，对外操作不重放</span>
+            </p>
+          </figure>
+          <div class="project-copy">
+            <h3>Warren</h3>
+            <p class="project-intro" data-en="A reliable runtime for long-horizon autonomous agents. It stays resident on a personal Mac and runs long tasks in the background without supervision.">高可靠的长时程自主 Agent 运行时，常驻在个人电脑上，在后台无人值守地执行长任务。</p>
+            <p class="project-detail" data-en="Every step of a task is written in order to a SQLite log, so a task picks up where it stopped after the process is killed, the machine sleeps, or it restarts. On recovery, external actions such as pushing code or opening a PR are not redone; the model first checks the remote state. Commands run in a macOS sandbox with no network and no access to secrets, and actions that need credentials go through the main process, with optional human approval.">任务的每一步按顺序写入 SQLite 日志，进程被强杀、电脑休眠或重启后，任务从中断处继续。恢复时，推送代码、开 PR 等对外操作不重做，先由模型核实远端结果。命令运行在 macOS 沙箱中，默认断网、读不到密钥，需要凭证的操作由主程序代为执行，可以要求人工审批。</p>
+            <dl class="project-stats">
+              <div><dt data-en="random kill -9 runs, 0 duplicate actions">次随机强杀，0 次重复操作</dt><dd>519</dd></div>
+              <div><dt data-en="SWE-bench Verified sample solved">SWE-bench Verified 抽样解决</dt><dd>23 / 28</dd></div>
+              <div><dt data-en="median cost per task">每题成本中位数</dt><dd>$0.16</dd></div>
+            </dl>
+            <ul class="tech-list" role="list" aria-label="技术栈" data-en-label="Technologies"><li>TypeScript</li><li>Bun</li><li>SQLite</li><li>React</li><li>Tauri</li></ul>
+            <a class="text-link" href="https://github.com/Nguxw/Warren"><span data-en="View Warren source">查看 Warren 源码</span><svg class="icon" aria-hidden="true"><use href="#icon-out"/></svg></a>
+          </div>
+        </article>
+
         <article class="project reveal" data-spotlight>
           <figure class="project-visual">
-            <figcaption><span class="project-no" aria-hidden="true">P/01</span><span data-en="Execution flow">执行流程示意</span></figcaption>
+            <figcaption><span class="project-no" aria-hidden="true">P/02</span><span data-en="Execution flow">执行流程示意</span></figcaption>
             <ol class="flow" role="list">
               <li><span data-en="Start">发起任务</span><strong>Web / CLI</strong></li>
               <li><span data-en="Decide">循环决策</span><strong>Agent Loop</strong></li>
@@ -240,7 +269,7 @@
 
         <article class="project reveal" data-spotlight>
           <figure class="project-visual">
-            <figcaption><span class="project-no" aria-hidden="true">P/02</span><span data-en="Case workflow">案件办理流程示意</span></figcaption>
+            <figcaption><span class="project-no" aria-hidden="true">P/03</span><span data-en="Case workflow">案件办理流程示意</span></figcaption>
             <ol class="flow flow-gated" role="list">
               <li><span data-en="Request">用户诉求</span><strong>Intake</strong></li>
               <li><span data-en="Orchestrate">案件编排</span><strong>LangGraph</strong></li>
@@ -262,7 +291,7 @@
 
         <article class="project project-wide reveal" data-spotlight>
           <figure class="project-visual">
-            <figcaption><span class="project-no" aria-hidden="true">P/03</span><span data-en="Repository pipeline">仓库理解流程示意</span></figcaption>
+            <figcaption><span class="project-no" aria-hidden="true">P/04</span><span data-en="Repository pipeline">仓库理解流程示意</span></figcaption>
             <ol class="flow flow-graph" role="list">
               <li><span data-en="Parse source">解析源码</span><strong>Symbols</strong></li>
               <li>
@@ -303,11 +332,11 @@
         </div>
         <div class="reveal">
           <dt data-en="Reliability & evaluation">可靠性与评测</dt>
-          <dd data-en="CAS for idempotency, distributed locks, task recovery, tool permissions, Docker and Playwright browser sandboxes, execution traces, and evaluation benchmarks">CAS 幂等控制、分布式锁、任务恢复、工具权限、Docker 与 Playwright 浏览器沙箱、执行记录和评测基准</dd>
+          <dd data-en="CAS for idempotency, distributed locks, log-based crash recovery, tool permissions, macOS Seatbelt, Docker, and Playwright browser sandboxes, execution traces, and evaluation benchmarks">CAS 幂等控制、分布式锁、基于事件日志的崩溃恢复、工具权限、macOS Seatbelt / Docker / Playwright 浏览器沙箱、执行记录和评测基准</dd>
         </div>
         <div class="reveal">
           <dt data-en="Frontend & delivery">前端与交付</dt>
-          <dd data-en="React, Vue, Docker, CI regression tests, and staging automation">React、Vue、Docker、CI 回归测试和预发自动化</dd>
+          <dd data-en="React, Vue, Tauri desktop apps, Docker, CI regression tests, and staging automation">React、Vue、Tauri 桌面端、Docker、CI 回归测试和预发自动化</dd>
         </div>
       </dl>
     </section>
