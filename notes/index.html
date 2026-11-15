@@ -47,7 +47,7 @@
     <section class="wrap notes-hero" aria-labelledby="notes-title">
       <p class="hero-status">
         <span class="pulse" aria-hidden="true"></span>
-        <span>2 <span data-en="notes · updated as I go">篇 · 持续更新</span></span>
+        <span>3 <span data-en="notes · updated as I go">篇 · 持续更新</span></span>
       </p>
       <h1 id="notes-title" lang="en">Field <em>notes</em><span class="dot">.</span></h1>
       <p class="notes-hero-lead" data-en="What I’ve been seeing and thinking about in tech: designs and papers I’ve read, lessons from projects I’ve built, and open questions worth writing down.">记录我在技术上的观察与思考：读过的设计和论文，做项目时的经验，以及一些还没想清楚、但值得写下来的问题。</p>
@@ -58,11 +58,24 @@
         <button class="chip" type="button" data-en="All" aria-pressed="true">全部</button>
         <button class="chip" type="button" data-tag="Agent" aria-pressed="false">Agent</button>
         <button class="chip" type="button" data-tag="Architecture" aria-pressed="false">Architecture</button>
+        <button class="chip" type="button" data-tag="Code Review" aria-pressed="false">Code Review</button>
+        <button class="chip" type="button" data-tag="Engineering" aria-pressed="false">Engineering</button>
         <button class="chip" type="button" data-tag="Harness" aria-pressed="false">Harness</button>
         <button class="chip" type="button" data-tag="Memory" aria-pressed="false">Memory</button>
         <button class="chip" type="button" data-tag="Product" aria-pressed="false">Product</button>
       </div>
       <ol class="note-list" id="notes-all" role="list">
+        <li class="note-row" data-tags="Agent|Code Review|Engineering">
+          <a class="note-link" href="claude-code-review.html">
+            <time class="date" datetime="2026-11-15">2026.11.15</time>
+            <div class="note-main">
+              <h2 class="note-title" data-en="How the Claude Code team reviews code">Claude Code 团队怎样做代码审查</h2>
+              <p class="note-summary" data-en="The Claude Code team has described its review process: minimise human review time, with reverts and incidents as the guardrail. This note walks through the layered checks, how the reviewer itself is evaluated and made to converge, and what the public docs say about the limits.">Claude Code 团队公开了自己的代码审查流程：以回滚和事故为护栏，尽量减少人工审查时间。本文梳理其中的分层检查、审查器的评测与收敛，并对照官方文档说明借鉴时需要注意的边界。</p>
+            </div>
+            <div class="note-side"><ul class="note-tags" role="list"><li>Agent</li><li>Code Review</li><li>Engineering</li></ul></div>
+            <svg class="icon note-arrow" aria-hidden="true"><use href="#icon-right"/></svg>
+          </a>
+        </li>
         <li class="note-row" data-tags="Agent|Memory|Product">
           <a class="note-link" href="personal-agent.html">
             <time class="date" datetime="2026-11-13">2026.11.13</time>

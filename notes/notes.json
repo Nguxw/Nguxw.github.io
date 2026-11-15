@@ -1,5 +1,14 @@
 [
   {
+    "slug": "claude-code-review",
+    "date": "2026-11-15",
+    "title": "Claude Code 团队怎样做代码审查",
+    "title_en": "How the Claude Code team reviews code",
+    "summary": "Claude Code 团队公开了自己的代码审查流程：以回滚和事故为护栏，尽量减少人工审查时间。本文梳理其中的分层检查、审查器的评测与收敛，并对照官方文档说明借鉴时需要注意的边界。",
+    "summary_en": "The Claude Code team has described its review process: minimise human review time, with reverts and incidents as the guardrail. This note walks through the layered checks, how the reviewer itself is evaluated and made to converge, and what the public docs say about the limits.",
+    "tags": ["Agent", "Code Review", "Engineering"]
+  },
+  {
     "slug": "personal-agent",
     "date": "2026-11-13",
     "title": "Personal Agent：从完成任务到承担事务",
