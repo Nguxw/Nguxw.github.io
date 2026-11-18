@@ -47,7 +47,7 @@
     <section class="wrap notes-hero" aria-labelledby="notes-title">
       <p class="hero-status">
         <span class="pulse" aria-hidden="true"></span>
-        <span>3 <span data-en="notes · updated as I go">篇 · 持续更新</span></span>
+        <span>4 <span data-en="notes · updated as I go">篇 · 持续更新</span></span>
       </p>
       <h1 id="notes-title" lang="en">Field <em>notes</em><span class="dot">.</span></h1>
       <p class="notes-hero-lead" data-en="What I’ve been seeing and thinking about in tech: designs and papers I’ve read, lessons from projects I’ve built, and open questions worth writing down.">记录我在技术上的观察与思考：读过的设计和论文，做项目时的经验，以及一些还没想清楚、但值得写下来的问题。</p>
@@ -63,8 +63,20 @@
         <button class="chip" type="button" data-tag="Harness" aria-pressed="false">Harness</button>
         <button class="chip" type="button" data-tag="Memory" aria-pressed="false">Memory</button>
         <button class="chip" type="button" data-tag="Product" aria-pressed="false">Product</button>
+        <button class="chip" type="button" data-tag="Verification" aria-pressed="false">Verification</button>
       </div>
       <ol class="note-list" id="notes-all" role="list">
+        <li class="note-row" data-tags="Agent|Engineering|Verification">
+          <a class="note-link" href="agent-trust.html">
+            <time class="date" datetime="2026-11-17">2026.11.17</time>
+            <div class="note-main">
+              <h2 class="note-title" data-en="Put the correction in the code: Lauren Tan on trusting what agents ship">把纠错写进代码：Lauren Tan 谈怎样信任 Agent 的产出</h2>
+              <p class="note-summary" data-en="At AI Engineer CODE 2026, Lauren Tan described how her team ships tens of thousands of pull requests a month without losing quality. This note walks through her trust pyramid and verification practices, checks them against her public pstack workflows, and looks at what the numbers and methods depend on.">Lauren Tan 在 AI Engineer CODE 2026 上介绍了她的团队怎样在一个月交付上万个 PR 的同时维持质量。本文梳理她的信任金字塔与验证方法，对照她公开的 pstack 工作流，并讨论这些数字与做法的适用条件。</p>
+            </div>
+            <div class="note-side"><ul class="note-tags" role="list"><li>Agent</li><li>Engineering</li><li>Verification</li></ul></div>
+            <svg class="icon note-arrow" aria-hidden="true"><use href="#icon-right"/></svg>
+          </a>
+        </li>
         <li class="note-row" data-tags="Agent|Code Review|Engineering">
           <a class="note-link" href="claude-code-review.html">
             <time class="date" datetime="2026-11-15">2026.11.15</time>

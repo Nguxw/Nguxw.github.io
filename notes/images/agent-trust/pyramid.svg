@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="t d">
+  <title id="t">信任金字塔</title>
+  <desc id="d">倒置的金字塔自上而下依次为代码本身、静态分析、验证和文字规则。前两层是确定性的，约束 Agent 能写出什么；验证用来发现缺陷、检查不变量并确认意图；文字只承载需要判断的内容。一次纠正从文字层向上移动，尽量落到确定性的层级。</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#ffffff0d"/></pattern>
+    <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="#ff5a1f"/></marker>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <style>
+    text { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", system-ui, sans-serif; fill: #edece8; }
+    .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    .s { font-size: 13px; fill: #9b9994; }
+    .xs { font-size: 12px; fill: #6b6a66; }
+    .b { font-size: 16px; font-weight: 600; }
+    .box { fill: #151517; stroke: #ffffff2e; }
+    .det { fill: #151517; stroke: #8fe3b899; }
+    .hi { fill: none; stroke: #ff5a1f; stroke-width: 1.6; opacity: 0; }
+    @keyframes dash9 { to { stroke-dashoffset: -18; } }
+    .flow9 { animation: dash9 1.2s linear infinite; }
+    @media (prefers-reduced-motion: reduce) { .motion { display: none; } .flow9 { animation: none; } }
+  </style>
+  <rect width="960" height="540" fill="#0e0e10"/>
+  <rect width="960" height="540" fill="url(#grid)"/>
+  <text x="32" y="40" class="mono" font-size="12" fill="#ff5a1f" letter-spacing="1.5">FIG.1</text>
+  <text x="84" y="40" class="s">越靠上越先投入，纠正尽量往上落</text>
+
+  <path class="det" d="M40 84 H600 L565 154 H75 Z"/>
+  <text x="320" y="114" class="b" text-anchor="middle">代码本身</text>
+  <text x="320" y="136" class="s" text-anchor="middle">API 设计 · 架构 · 重构</text>
+
+  <path class="det" d="M79 162 H561 L526 232 H114 Z"/>
+  <text x="320" y="192" class="b" text-anchor="middle">静态分析</text>
+  <text x="320" y="214" class="s" text-anchor="middle">lint · 类型 · 编译器 · 测试</text>
+
+  <path class="box" d="M118 240 H522 L487 310 H153 Z"/>
+  <text x="320" y="270" class="b" text-anchor="middle">验证</text>
+  <text x="320" y="292" class="s" text-anchor="middle">运行时验证 · 形式化验证</text>
+
+  <path class="box" d="M157 318 H483 L448 388 H192 Z"/>
+  <text x="320" y="348" class="b" text-anchor="middle">文字</text>
+  <text x="320" y="370" class="s" text-anchor="middle">规则 · Skill · AGENTS.md</text>
+
+  <path id="up" class="flow9" d="M476 384 L620 96" stroke="#ff5a1f" stroke-width="1.4" stroke-dasharray="5 4" fill="none" marker-end="url(#ao)"/>
+  <text x="470" y="408" class="s" style="fill:#ff5a1f">一次纠正</text>
+
+  <text x="664" y="92" class="xs mono" letter-spacing="1" style="fill:#8fe3b8">确定性</text>
+  <text x="664" y="116" class="s">约束 Agent 能写出什么</text>
+  <text x="664" y="136" class="s">默认走受支持的路径</text>
+  <text x="664" y="194" class="s">错误在合并前被机器拒绝</text>
+  <text x="664" y="214" class="s">报错信息指明应改用什么</text>
+  <text x="664" y="272" class="s">发现缺陷，检查不变量</text>
+  <text x="664" y="292" class="s">确认 Agent 理解了意图</text>
+  <text x="664" y="350" class="s">只承载需要判断的内容</text>
+  <text x="664" y="370" class="s">跳过它，没有检查会失败</text>
+
+  <path d="M32 436 H 928" stroke="#ffffff1a"/>
+  <text x="32" y="466" class="s">每纠正 Agent 一次，先考虑能否把它变成接口、类型或一条会失败的检查，而不是在规则文件里再加一行。</text>
+  <text x="32" y="490" class="s">代码库是 Agent 最大的输入之一，留在仓库里的变通写法会被下一个 Agent 当作既定做法照搬。</text>
+  <text x="32" y="514" class="xs">依据 Lauren Tan 在 AI Engineer CODE 2026 的演讲整理。</text>
+
+  <g class="motion">
+    <path class="hi" d="M157 318 H483 L448 388 H192 Z"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;1;1;0;0" keyTimes="0;0.04;0.16;0.22;1"/></path>
+    <path class="hi" d="M118 240 H522 L487 310 H153 Z"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.2;0.24;0.36;0.42;1"/></path>
+    <path class="hi" d="M79 162 H561 L526 232 H114 Z" style="stroke:#8fe3b8"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.4;0.44;0.56;0.62;1"/></path>
+    <path class="hi" d="M40 84 H600 L565 154 H75 Z" style="stroke:#8fe3b8"><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.6;0.64;0.9;0.96;1"/></path>
+    <circle r="3.4" fill="#ff5a1f" opacity="0" filter="url(#glow)"><animateMotion dur="8s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.02;0.66;1"><mpath href="#up"/></animateMotion><animate attributeName="opacity" dur="8s" repeatCount="indefinite" values="0;0;1;1;0;0" keyTimes="0;0.02;0.03;0.66;0.7;1"/></circle>
+  </g>
+</svg>

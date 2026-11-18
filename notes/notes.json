@@ -1,5 +1,14 @@
 [
   {
+    "slug": "agent-trust",
+    "date": "2026-11-17",
+    "title": "把纠错写进代码：Lauren Tan 谈怎样信任 Agent 的产出",
+    "title_en": "Put the correction in the code: Lauren Tan on trusting what agents ship",
+    "summary": "Lauren Tan 在 AI Engineer CODE 2026 上介绍了她的团队怎样在一个月交付上万个 PR 的同时维持质量。本文梳理她的信任金字塔与验证方法，对照她公开的 pstack 工作流，并讨论这些数字与做法的适用条件。",
+    "summary_en": "At AI Engineer CODE 2026, Lauren Tan described how her team ships tens of thousands of pull requests a month without losing quality. This note walks through her trust pyramid and verification practices, checks them against her public pstack workflows, and looks at what the numbers and methods depend on.",
+    "tags": ["Agent", "Engineering", "Verification"]
+  },
+  {
     "slug": "claude-code-review",
     "date": "2026-11-15",
     "title": "Claude Code 团队怎样做代码审查",
